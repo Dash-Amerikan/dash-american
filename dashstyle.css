@@ -25,6 +25,7 @@ h1 {
       background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255, .75)), url(kards-familypic-bw.jpg);
       background-size: 100% 100%, cover;
       background-position: center;
+      background-position: top;
       margin: 0;
       height: 80vh;
 
@@ -54,7 +55,7 @@ font-family: 'Playfair Display', serif;
 body {
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
-      margin-bottom: 5em;
+  margin-bottom: 5em;
   text-align: left;
   list-style: none;
 }
