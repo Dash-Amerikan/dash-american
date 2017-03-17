@@ -47,9 +47,17 @@ font-family: 'Playfair Display', serif;
   text-align: center;
   text-transform: lowercase;
   padding: 20px;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   padding-left: 0px;
+}
 
+h3 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 2em;
+  text-align: left;
+  list-style: none;
 }
 
 body {
