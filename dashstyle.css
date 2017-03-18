@@ -39,6 +39,7 @@ h1 span, h1 img{
 }
 
 
+
 h2 {
 font-family: 'Playfair Display', serif;
   font-weight: normal;
@@ -68,7 +69,8 @@ body {
   list-style: none;
 }
 
-ul {
-  list-style: none;
-
+span.linktext {
+  color:#FFFFFF;
+  font-size: 1em;
+  font-family: "Verdana", Verdana, sans;
 }
