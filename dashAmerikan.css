@@ -17,6 +17,58 @@ html {
 html, body{margin: 0; padding: 0;
 }
 
+body {
+  font-weight: 100;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/*red footnote effect*/
+.footnote-link {
+  border: 1px solid red;
+  padding: 0 6px;
+  border-radius: 6px;
+  line-height: .5;
+  font-size: 75%;
+  vertical-align: super;
+  font-weight: 400;
+}
+
+/*the aside*/
+aside{
+
+}
+
+.kiss{
+  display: block;
+  width: 50px;
+  float: right;
+  margin-right: -80px;
+}
+
+/*red footnote effect*/
+.footnote-link2 {
+  background-color: red;
+  padding: 0 6px;
+  color: #f8f7f3;
+  border-radius: 6px;
+  line-height: .5;
+  font-size: 75%;
+  vertical-align: super;
+  font-weight: 400;
+}
+
+/*kiss asides*/
+.article-link-icon.kissaside {
+  background-position: 0px 150px;
+}
+
+
+/
 
 
 h1 span, h1 img{
@@ -24,19 +76,19 @@ h1 span, h1 img{
   margin-left: auto;
   margin-right: auto;
 }
+
 h1 {
-  font-size: 150px;
+      font-size: 150px;
       text-transform: uppercase;
       font-weight: 100;
       text-align: center;
       letter-spacing: -2px;
-      background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255, .75)), url(kards-familypic-bw.jpg);
+      background-image: linear-gradient(rgba(255,255,255,0.75),(rgba(255,255,255,0.75)), url(kards-familypic-bw.jpg);
       background-size: 100% 100%, cover;
       background-position: center;
       background-position: top;
       margin: 0;
       height: 80vh;
-
 }
 
 
