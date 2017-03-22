@@ -22,7 +22,7 @@ h1 {
       font-weight: 100;
       text-align: center;
       letter-spacing: -2px;
-      background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255, .75)), url(kards-familypic-bw.jpg);
+      /*background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255, .75)), url(kards-familypic-bw.jpg);*/
       background-size: 100% 100%, cover;
       background-position: center;
       background-position: top;
