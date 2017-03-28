@@ -6,6 +6,8 @@ selector {properties: value;
 
 */
 
+/**/
+
 html {
 
   /*min-width: 660px;*/
@@ -28,17 +30,15 @@ img {
 }
 
 
-
 /*the aside*/
 aside{
-
 }
 
 .kiss{
   display: block;
   width: 50px;
   float: right;
-  margin-right: -80px;
+  margin-right: 0px;
 }
 
 /*red footnote effect*/
@@ -59,34 +59,30 @@ aside{
 }
 
 
-/
 
-
-h1 span, h1 img{
+h1 span, h1 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 h1 {
-      font-size: 150px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 500% !important;
       text-transform: uppercase;
       font-weight: 100;
       text-align: center;
       letter-spacing: -2px;
-      background-image: linear-gradient(rgba(255,255,255,0.75),(rgba(255,255,255,0.75)), url(kards-familypic-bw.jpg);
+      /*background-image:  linear-gradient(rgba(255,255,255,0.75),(rgba(255,255,255,0.75)), url(kards-familypic-bw.jpg);
       background-size: 100% 100%, cover;
       background-position: center;
       background-position: top;
       margin: 0;
-      height: 80vh;
+      height: 80vh;*/
 }
 
-
-
-
-h2 {
-font-family: 'Playfair Display', serif;
+h2{
+font-family: 'Playfair Display', Times, serif;
   font-weight: normal;
   font-style: italic;
   font-size: 130%;
@@ -95,7 +91,6 @@ font-family: 'Playfair Display', serif;
   padding: 20px;
   margin-bottom: 3em;
   padding-left: 0px;
-
 }
 
 body
@@ -107,4 +102,16 @@ body
   margin-right: 5em;
   text-align: left;
   list-style: none;
+}
+
+p {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+
+}
+
+.tabs .tab a, .tabs .tab a.active {
+    color: white !important;
+    font-weight: 400;
 }
