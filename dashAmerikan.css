@@ -111,6 +111,24 @@ p {
 
 }
 
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push{
+  height: 50px;
+}
+
+/*
+footer {
+  width: 100%;
+  background-color: black;
+  padding: 60px 0px
+}
+*/
+
 .tabs .tab a, .tabs .tab a.active {
     color: white !important;
     font-weight: 400;
