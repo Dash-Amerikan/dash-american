@@ -21,6 +21,51 @@
 
     <!--<img src="kardashiankiss.png" width="250" height="170">*/!-->
 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+    modalPosition();
+    $(window).resize(function(){
+        modalPosition();
+    });
+
+
+ $(document).ready(function(){
+        $('.modal').fadeIn('fast');
+    });
+   $('.close').click(function(){
+        $('.modal, .modal-backdrop').fadeOut('fast');
+    });
+
+
+});
+
+function modalPosition() {
+    var width = $('.modal').width();
+    var pageWidth = $(window).width();
+    var x = (pageWidth / 2) - (width / 2);
+    $('.modal').css({left: x + "px"});
+}
+
+
+</script>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+    <div class="modal-backdrop"></div>
+
+
+
+
 </head>
 
 <body>
@@ -62,7 +107,7 @@ Suspendisse volutpat ligula ac euismod pharetra. Vestibulum tristique, magna non
 </p>
 
 <br>
-<a href="#" class="kiss"><img src="kardashiankiss.png"></a><aside id="kissbox">here is the aside</aside>
+<a href="#"><img class="kiss" src="kardashiankiss.png"></a><aside id="kissbox">here is the aside</aside>
 <br>
 
 <p>Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor.
