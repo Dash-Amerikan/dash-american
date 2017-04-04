@@ -215,6 +215,15 @@ footer {
   line-height: 0;
 }
 
+/*for row of three images*/
+.row-of-three {
+  padding: 10px 60px;
+  text-align: center;
+}
+
+.row-of-three img {
+  width: 300px;
+}
 
 
 .tabs .tab a, .tabs .tab a.active {
