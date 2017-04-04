@@ -157,7 +157,7 @@ font-family: 'Playfair Display', Times, serif;
   text-align: center;
   text-transform: lowercase;
   padding: 20px;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   padding-left: 0px;
 }
 
@@ -262,6 +262,25 @@ footer {
   line-height: 0;
 }
 
+/*for row of three images*/
+.row-of-three {
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.row-of-three img {
+  width: 300px;
+}
+
+/*for row of five images*/
+.row-of-five {
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.row-of-five img {
+  width: 180px;
+}
 
 
 .tabs .tab a, .tabs .tab a.active {
