@@ -179,7 +179,9 @@ p {
   height: 50px;
 }
 */
-
+.row .col{
+    padding: 0 !important;
+}
 
 footer {
   width: 100%;
