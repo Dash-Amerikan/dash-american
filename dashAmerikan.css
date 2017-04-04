@@ -205,6 +205,10 @@ p {
   font-size: .7em;
 }
 
+.foot-col img{
+  height: 50px;
+}
+
 .foot-row, .foot-icons{
   margin: 0 80px 100px;
   padding-bottom: 50px;
@@ -213,7 +217,14 @@ p {
 
 .foot-icons{
   margin-bottom: 0;
+  text-align: center;
 }
+
+.foot-icons ul li{
+  display: inline-block;
+}
+
+
 
 
 .footer-section-header{
