@@ -33,6 +33,15 @@ img {
   height: auto;
 }
 
+/*footnote box, above right of red footnote*/
+
+.footnotebox {
+  width: 200px;
+  height: 100px;
+  background-color: #cccccc;
+}
+
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
