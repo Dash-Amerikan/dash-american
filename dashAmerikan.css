@@ -179,9 +179,7 @@ p {
   height: 50px;
 }
 */
-.row .col{
-    padding: 0 !important;
-}
+
 
 footer {
   width: 100%;
@@ -193,6 +191,17 @@ footer {
   bottom: 0;
 
 }
+
+
+.image-col{
+    padding: 0 !important;
+    border: 1px solid #fff;
+}
+
+.image-row{
+  line-height: 0;
+}
+
 
 
 .tabs .tab a, .tabs .tab a.active {
