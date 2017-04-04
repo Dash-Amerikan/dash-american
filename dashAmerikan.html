@@ -4,6 +4,57 @@
 
 <head>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script type="text/javascript">
+
+  /*this is for the welcome window*/
+  $(function(){
+      modalPosition();
+      $(window).resize(function(){
+          modalPosition();
+      });
+
+  {
+   $(document).ready(function(){
+          $('.modal').fadeIn('fast');
+          $('.footnotebox').hide();
+      });
+     $('.close').click(function(){
+          $('.modal, .modal-backdrop').fadeOut('fast');
+      });
+  }
+
+  /*this is for the footnote box*/
+  {
+      $('.footnote').click(function(){
+             $('.footnotebox').fadeIn('fast');
+         });
+        $('.close').click(function(){
+             $('.footnotebox, .modal-backdrop').fadeOut('fast');
+         });
+  }
+
+
+
+  });
+
+  function modalPosition() {
+      var width = $('.modal').width();
+      var pageWidth = $(window).width();
+      var x = (pageWidth / 2) - (width / 2);
+      $('.modal').css({left: x + "px"});
+  }
+
+  function modalPosition() {
+      var width = $('.footnotebox').width();
+      var pageWidth = $(window).width();
+      var x = (pageWidth / 2) - (width / 2);
+      $('.footnotebox').css({left: x + "px"});
+  }
+
+
+  </script>
+
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
   <title> DASH AMERIKAN • HOME </title>
@@ -21,54 +72,15 @@
 
     <!--<img src="kardashiankiss.png" width="250" height="170">*/!-->
 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-<script type="text/javascript">
-
-$(function(){
-    modalPosition();
-    $(window).resize(function(){
-        modalPosition();
-    });
-
-{
- $(document).ready(function(){
-        $('.modal').fadeIn('fast');
-    });
-   $('.close').click(function(){
-        $('.modal, .modal-backdrop').fadeOut('fast');
-    });
-}
-
-{
-    $('.footnote').click(function(){
-           $('.footnotebox').fadeIn('fast');
-       });
-      $('.close').click(function(){
-           $('.footnotebox, .modal-backdrop').fadeOut('fast');
-       });
-}
 
 
-
-});
-
-function modalPosition() {
-    var width = $('.modal').width();
-    var pageWidth = $(window).width();
-    var x = (pageWidth / 2) - (width / 2);
-    $('.modal').css({left: x + "px"});
-}
-
-
-</script>
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <p>Some text in the </p>
   </div>
 
 </div>
@@ -136,6 +148,11 @@ Suspendisse volutpat ligula ac euismod pharetra. Vestibulum tristique, magna non
 <br>
 
 <p>Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor.
+Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. <img src="Kim-rectangle.jpeg" alt="Kim rectangle" style="width:400px;height: 800px;"> In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor. Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor.
+
+
+
+
 </p>
 
 <br>
