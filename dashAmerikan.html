@@ -5,55 +5,79 @@
 <head>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
   <script type="text/javascript">
 
-  /*this is for the welcome window*/
-  $(function(){
-      modalPosition();
-      $(window).resize(function(){
-          modalPosition();
-      });
-
-  {
    $(document).ready(function(){
-          $('.modal').fadeIn('fast');
-          $('.footnotebox').hide();
-      });
+
+     /*welcome window*/
+     modalPosition();
+     $(window).resize(function(){
+         modalPosition();
+     });
+
+     $('.modal').fadeIn('fast');
+     $('.footnotebox').hide();
      $('.close').click(function(){
-          $('.modal, .modal-backdrop').fadeOut('fast');
+       $('.modal, .modal-backdrop').fadeOut('fast');
       });
-  }
 
-  /*this is for the footnote box*/
-  {
+           /*modal window for footnote*/
       $('.footnote').click(function(){
-             $('.footnotebox').fadeIn('fast');
-         });
-        $('.close').click(function(){
-             $('.footnotebox, .modal-backdrop').fadeOut('fast');
-         });
-  }
+          $('.footnotebox').fadeIn('fast');
+      });
+      $('.close').click(function(){
+          $('.footnotebox, .modal-backdrop').fadeOut('fast');
+      });
 
+      function modalPosition() {
+          var width = $('.modal').width();
+          var pageWidth = $(window).width();
+          var x = (pageWidth / 2) - (width / 2);
+          $('.modal').css({left: x + "px"});
+      }
 
+      function modalPosition() {
+          var width = $('.footnotebox').width();
+          var pageWidth = $(window).width();
+          var x = (pageWidth / 2) - (width / 2);
+          $('.footnotebox').css({left: x + "px"});
+      }
+
+      /*materialize.css for the front and back arrows (indicators) on the cycling image banner*/
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
 
   });
 
-  function modalPosition() {
-      var width = $('.modal').width();
-      var pageWidth = $(window).width();
-      var x = (pageWidth / 2) - (width / 2);
-      $('.modal').css({left: x + "px"});
+
+
+</script>
+
+<!--this is the beginning of making the cycling image banner work-->
+
+<script>
+  window.onload = rotate;
+
+  var imagebanner = 0;
+  var singleimages = new Array("testimagebanner1.jpg","testimagebanner2.jpg","testimagebanner1.jpg","testimagebanner2.jpg", "testimagebanner1.jpg");
+
+  function rotate() {
+       imagebanner++;
+       if (imagebanner == singleimages.length) {
+          imagebanner = 0;
+       }
+       document.getElementById("Banner").src = singleimages[imagebanner];
+
+       setTimeout(rotate, 5 * 1000);
   }
-
-  function modalPosition() {
-      var width = $('.footnotebox').width();
-      var pageWidth = $(window).width();
-      var x = (pageWidth / 2) - (width / 2);
-      $('.footnotebox').css({left: x + "px"});
-  }
+</script>
 
 
-  </script>
+<!--this is the end of making the cycling image banner work-->
+
+
+
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -74,24 +98,35 @@
 
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the </p>
-  </div>
 
-</div>
-    <div class="modal-backdrop"></div>
+
+<!--for the cycling image banner-->
+<script src="script07.js"></script>
 
 
 
 
 </head>
 
+
+
+
+
 <body>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the welcome window</p>
+    </div>
+
+  </div>
+      <div class="modal-backdrop"></div>
+
 
   <h1>
   DASH
@@ -119,20 +154,38 @@
       </div>
       </div>
 
+<!--this is where the cycling image banner appears in the body-->
+<div class="centered">
+  <img src="testimagebanner1.jpg" id= Banner alt="Image_Banner">
+</div>
+
+<!--NOT CURRENTLY WORKING: this allows for forward and backward arrows on the cycling image banner
+<div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img src="testimagebanner1.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="testimagebanner2.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="testimagebanner1.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="testimagebanner2.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="testimagebanner1.jpg"></a>
+</div>
+-->
+
+
+
+
+
+
+
   <h2>narrative</h2>
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis augue, at rhoncus turpis. Nam mauris enim, faucibus eget mollis in, pulvinar a tortor.<a class="footnote" href="#">1</a></p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis augue, at rhoncus turpis. Nam mauris enim, faucibus eget mollis in, pulvinar a tortor.<a class="footnote">1</a></p>
 
-<!-- Modal content -->
+<!-- Modal for footnote-->
 <div id= "newModal" class="footnotebox">
   <span class="close">&times;</span>
-  <p>Some text in the Modal..</p>
+  Some text in the footnote window
 </div>
-
-  <div class="modal-backdrop"></div>
-
-
+<div class="modal-backdrop"></div>
 
 <p>
 Curabitur sed mattis dolor, quis convallis nibh. Nullam imperdiet viverra elementum. Etiam tempus varius feugiat. Integer at dui enim. Nam nec magna vitae dolor placerat rutrum. Phasellus fringilla ipsum at sapien congue, a porta libero aliquam. Ut posuere augue felis, sit amet tempus nibh blandit id. Aliquam pharetra placerat sapien, a faucibus orci accumsan a. Nulla non bibendum orci. Sed neque nunc, condimentum ac imperdiet in, facilisis ac dui. Aenean commodo hendrerit velit. Donec sagittis orci sed aliquam luctus.
@@ -143,7 +196,17 @@ Suspendisse volutpat ligula ac euismod pharetra. Vestibulum tristique, magna non
 </p>
 
 <br>
-<a href="#"><img class="kiss" src="kardashiankiss.png"></a><aside id="kissbox">here is the aside</aside>
+<a href="#"><img class="kiss" src="kardashiankiss.png"></a>
+
+<!-- new "kissbox" modal for the aside-->
+<div id= "newModal" class="kissbox">
+  <span class="close">&times;</span>
+  here is the the aside2
+</div>
+<div class="modal-backdrop"></div>
+
+
+
 
 <br>
 
