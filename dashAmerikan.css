@@ -366,3 +366,17 @@ element {
     height: 52px;
   }
 }
+
+#kiss1 {
+  float: right;
+  width: 70px;
+  margin-right: 10%;
+}
+
+#kiss-body {
+  max-width: 700px;
+  margin: auto;
+  display: none;
+  border: 1px solid #ddd;
+  padding: 10px;
+}

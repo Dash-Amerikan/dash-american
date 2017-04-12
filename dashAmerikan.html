@@ -211,15 +211,20 @@ Suspendisse volutpat ligula ac euismod pharetra. Vestibulum tristique, magna non
 </p>
 
 <br>
-<a href="#"><img class="kiss" src="kardashiankiss.png"></a>
 
-<!-- new "kissbox" modal for the aside-->
-<div id= "newModal" class="kissbox1">
-  <span class="close">&times;</span>
-  here is the the aside
-</div>
-<div class="modal-backdrop"></div>
+<!-- kiss modal start -->
+<img id="kiss1" src="kardashiankiss.png" alt="kiss">
+<div id="kiss-body">Here is the aside.
+<p>Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor.
+Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros.
+</p></div>
 
+<script>
+$( "#kiss1" ).click(function() {
+  $('#kiss-body').slideToggle('fast');
+});
+</script>
+<!-- kiss modal end -->
 
 
 
