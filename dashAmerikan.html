@@ -16,19 +16,19 @@
      $(window).resize(function(){
          modalPosition();
      });
-
+   /*modal window for footnote*/
      $('.modal').fadeIn('fast');
-     $('.footnotebox').hide();
+     $('.footnotebox1').hide();
      $('.close').click(function(){
        $('.modal, .modal-backdrop').fadeOut('fast');
       });
 
-           /*modal window for footnote*/
+
       $('.footnote').click(function(){
-          $('.footnotebox').fadeIn('fast');
+          $('.footnotebox1').fadeIn('fast');
       });
       $('.close').click(function(){
-          $('.footnotebox, .modal-backdrop').fadeOut('fast');
+          $('.footnotebox1, .modal-backdrop').fadeOut('fast');
       });
 
       function modalPosition() {
@@ -39,14 +39,13 @@
       }
 
       function modalPosition() {
-          var width = $('.footnotebox').width();
+          var width = $('.footnotebox1').width();
           var pageWidth = $(window).width();
           var x = (pageWidth / 2) - (width / 2);
-          $('.footnotebox').css({left: x + "px"});
+          $('.footnotebox1').css({left: x + "px"});
       }
 
-      /*materialize.css for the front and back arrows (indicators) on the cycling image banner
-      $('.carousel.carousel-slider').carousel({fullWidth: true});*/
+      
 
   });
 
@@ -196,7 +195,7 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis augue, at rhoncus turpis. Nam mauris enim, faucibus eget mollis in, pulvinar a tortor.<a class="footnote">1</a>
 
 <!-- Modal for footnote-->
-<div id= "newModal" class="footnotebox">
+<div id= "newModal" class="footnotebox1">
   <span class="close">&times;</span>
   <h5>Panofsky, Erwin. “On the Problem of Describing and Interpreting Works of the Visual Arts.” Critical Inquiry 38, No. 3 (Spring 2012): 467-82.</h5>
 </div>
@@ -215,7 +214,7 @@ Suspendisse volutpat ligula ac euismod pharetra. Vestibulum tristique, magna non
 <a href="#"><img class="kiss" src="kardashiankiss.png"></a>
 
 <!-- new "kissbox" modal for the aside-->
-<div id= "newModal" class="kissbox">
+<div id= "newModal" class="kissbox1">
   <span class="close">&times;</span>
   here is the the aside
 </div>
