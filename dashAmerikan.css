@@ -29,7 +29,7 @@ img {
 /*footnote box associated with red footnote*/
 /*#7FFF00*/
 
-.footnotebox {
+.footnotebox1 {
   width: 560px;
   height: 105px;
   background-color: #f2f2f2;
@@ -92,7 +92,7 @@ img {
   margin-right: 250px;
 }
 
-.kissbox {
+.kissbox1 {
   width: 700px;
   height: 500px;
   background-color: #fff;
