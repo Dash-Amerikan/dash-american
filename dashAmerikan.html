@@ -4,7 +4,16 @@
 
 <head>
 
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+  <script>
+  $( ".kiss" ).click(function() {
+    var kiss_id = $(this).attr('id');
+    $('#kiss-' + kiss_id).slideToggle('fast');
+  });
+  </script>
 
 
   <script type="text/javascript">
@@ -16,20 +25,22 @@
      $(window).resize(function(){
          modalPosition();
      });
-   /*modal window for footnote*/
-     $('.modal').fadeIn('fast');
-     $('.footnotebox1').hide();
-     $('.close').click(function(){
-       $('.modal, .modal-backdrop').fadeOut('fast');
-      });
 
+   /*modal window for footnote1*/
+     $('.modal').fadeIn('fast');
+     $('.footnotebox').hide();
+     $('.close').click(function(){
+       $('.footnotebox, .modal, .modal-backdrop').fadeOut('fast');
+      });
 
       $('.footnote').click(function(){
-          $('.footnotebox1').fadeIn('fast');
+          var f_id = $(this).attr('id');
+          $('#foot-' + f_id).fadeIn('fast');
       });
-      $('.close').click(function(){
+      /*$('.close').click(function(){
           $('.footnotebox1, .modal-backdrop').fadeOut('fast');
-      });
+      });*/
+
 
       function modalPosition() {
           var width = $('.modal').width();
@@ -39,22 +50,19 @@
       }
 
       function modalPosition() {
-          var width = $('.footnotebox1').width();
+          var width = $('.footnotebox').width();
           var pageWidth = $(window).width();
           var x = (pageWidth / 2) - (width / 2);
-          $('.footnotebox1').css({left: x + "px"});
+          $('.footnotebox').css({left: x + "px"});
       }
 
-      
+
 
   });
-
-
-
 </script>
 
-<!--this is the beginning of making the cycling image banner work-->
 
+<!--this is the beginning of making the cycling image banner work-->
 <script>
   window.onload = rotate;
 
@@ -73,7 +81,10 @@
 </script>
 
 
-<!--this is the end of making the cycling image banner work-->
+
+
+<!--this is for making multiple embedded videos work-->
+
 
 
 
@@ -102,6 +113,7 @@
 
 <!--for the cycling image banner-->
 <script src="script07.js"></script>
+
 
 
 
@@ -191,44 +203,51 @@
 
   <h2>narrative</h2>
 
-<!-- Modal for footnote-->
-<div id= "newModal" class="footnotebox1">
-  <span class="close">&times;</span>
-  <h5>Panofsky, Erwin. “On the Problem of Describing and Interpreting Works of the Visual Arts.” Critical Inquiry 38, No. 3 (Spring 2012): 467-82.</h5>
-</div>
+<!--all footnotes here-->
+
+  <div id= "foot-n1" class="footnotebox">
+    <span class="close">&times;</span>
+    <h5>Panofsky, Erwin. “On the Problem of Describing and Interpreting Works of the Visual Arts.” Critical Inquiry 38, No. 3 (Spring 2012): 467-82.</h5>
+  </div>
+
+  <div id= "foot-n2" class="footnotebox">
+    <span class="close">&times;</span>
+    <h5>Panofsky, Erwin</h5>
+  </div>
+
+
+
+
 
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis augue, at rhoncus turpis. Nam mauris enim, faucibus eget mollis in, pulvinar a tortor.<a class="footnote">1</a>
-
-Curabitur sed mattis dolor, quis convallis nibh. Nullam imperdiet viverra elementum. Etiam tempus varius feugiat. Integer at dui enim. Nam nec magna vitae dolor placerat rutrum. Phasellus fringilla ipsum at sapien congue, a porta libero aliquam. Ut posuere augue felis, sit amet tempus nibh blandit id. Aliquam pharetra placerat sapien, a faucibus orci accumsan a. Nulla non bibendum orci. Sed neque nunc, condimentum ac imperdiet in, facilisis ac dui. Aenean commodo hendrerit velit. Donec sagittis orci sed aliquam luctus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis augue, at rhoncus turpis. Nam mauris enim, faucibus eget mollis in, pulvinar a tortor.<a class="footnote" id="n1">1</a> Curabitur sed mattis dolor, quis convallis nibh. Nullam imperdiet viverra elementum. Etiam tempus varius feugiat. Integer at dui enim. Nam nec magna vitae dolor placerat rutrum.<a class="footnote" id="n2">2</a> Phasellus fringilla ipsum at sapien congue, a porta libero aliquam. Ut posuere augue felis, sit amet tempus nibh blandit id. Aliquam pharetra placerat sapien, a faucibus orci accumsan a. Nulla non bibendum orci. Sed neque nunc, condimentum ac imperdiet in, facilisis ac dui. Aenean commodo hendrerit velit. Donec sagittis orci sed aliquam luctus.
 </p>
 
 <p>
 Suspendisse volutpat ligula ac euismod pharetra. Vestibulum tristique, magna non facilisis pellentesque, ipsum enim interdum ipsum, finibus fermentum mauris ante vel risus. Curabitur in placerat justo. Aliquam id rhoncus justo. Nam feugiat est at ex fermentum, et ultrices ligula vehicula. Fusce in rutrum turpis.
 </p>
 
-<br>
-
-<!-- kiss modal start -->
-<img id="kiss1" src="kardashiankiss.png" alt="kiss">
-<div id="kiss-body">Here is the aside.
-<p>Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor.
-Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros.
+<!-- kiss modal 1-->
+<img class="kiss" id="k1" src="kardashiankiss.png" alt="kiss">
+<div id="kiss-k1" class="kiss-body kissbox">
+<p>The first aside<iframe width="560" height="315" src="https://www.youtube.com/embed/Hjy49UQTkI0" frameborder="0" allowfullscreen></iframe>
 </p></div>
 
-<script>
-$( "#kiss1" ).click(function() {
-  $('#kiss-body').slideToggle('fast');
-});
-</script>
-<!-- kiss modal end -->
+<p>
+Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus.Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor. Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros.
+</p>
+
+<!--kiss modal 2-->
+<img class="kiss" id="k2" src="kardashiankiss.png" alt="kiss">
+<div id="kiss-k2" class="kiss-body kissbox">
+<p>The second aside<iframe width="560" height="315" src="https://www.youtube.com/embed/Hjy49UQTkI0" frameborder="0" allowfullscreen></iframe>
+</p></div>
 
 
 
-<br>
 
-<p>Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros. In tincidunt nulla elit, sed fermentum massa dapibus eu. Nullam malesuada mauris vitae felis viverra, sed maximus ante luctus. Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor.
+<p>Vestibulum sit amet ligula et purus vehicula efficitur vitae id odio. Nulla vel efficitur mi. Duis condimentum velit dapibus, dapibus tortor id, semper purus. In ut enim eu purus efficitur pulvinar eu ac erat. Quisque a cursus tortor.
 Duis euismod dolor vel turpis dapibus, vel eleifend odio aliquam. Quisque cursus ante ac tortor sagittis tempus. Mauris dui est, scelerisque et nulla et, tincidunt feugiat eros.
 </p>
 
