@@ -29,7 +29,8 @@ img {
 /*footnote box associated with red footnote*/
 /*#7FFF00*/
 
-.footnotebox1 {
+
+.footnotebox {
   width: 560px;
   height: 105px;
   background-color: #f2f2f2;
@@ -39,9 +40,12 @@ img {
   /*border: 1px solid black;*/
 }
 
+/*use # for id (primary)*/
+/*use . for class (secondary)*/
+
+
 
 /* The Modal (the entire site behind welcome window */
-/**/
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -92,7 +96,7 @@ img {
   margin-right: 250px;
 }
 
-.kissbox1 {
+.kissbox {
   width: 700px;
   height: 500px;
   background-color: #fff;
@@ -367,13 +371,13 @@ element {
   }
 }
 
-#kiss1 {
+#kiss {
   float: right;
   width: 70px;
   margin-right: 10%;
 }
 
-#kiss-body {
+.kiss-body {
   max-width: 700px;
   margin: auto;
   display: none;
