@@ -20,6 +20,96 @@ body {
 
 }
 
+
+#lilnavbox{
+  border: 1px solid white;
+  border-radius: 40px;
+  bottom:50px;
+  left:20px;
+  position: fixed;
+  z-index: 3;
+  height: 220px;
+  width: 50px;
+  background-color: #000000;
+  padding-top: 15px;
+}
+
+.lilnavbox-circle{
+background-color: #FFFFFF;
+border-radius: 20px;
+width: 40px;
+height:40px;
+margin-top: 5px;
+margin-left: 4px;
+padding-left: 13px;
+}
+
+.lilnavbox-circle-diff-margin{
+background-color: #FFFFFF;
+border-radius: 20px;
+width: 40px;
+height:40px;
+margin-top: 5px;
+margin-left: 4px;
+padding-left: 2px;
+padding-top: 2px;
+}
+
+.lilnavbox-circle-another-diff-margin{
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  width: 40px;
+  height:40px;
+  margin-top: 5px;
+  padding-top: 3px;
+  margin-left: 4px;
+  padding-left: 2px;
+
+
+}
+
+
+
+
+a.black-link:link{
+color: #000000;
+}
+
+a.black-link:visited { color: #000; text-decoration:none; font-weight:normal; }
+
+
+
+
+
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/*footnote box associated with red footnote*/
+/*#7FFF00*/
+
+
+.footnotebox {
+  width: 560px;
+  height: 105px;
+  background-color: #f2f2f2;
+  /*background-color: #fff;*/
+  z-index: 1;
+  position: absolute;
+  /*border: 1px solid black;*/
+}
+
+
+
+
+
+
+
+
+
 img {
   max-width: 100%;
   width: auto;
