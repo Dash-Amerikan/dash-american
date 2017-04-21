@@ -159,9 +159,20 @@
 
 
         <div id="lilnavbox">
+          <script language="javascript" type="text/javascript">
+
+            function popitup(url) {
+	             newwindow=window.open(url,'name','height=200,width=150');
+	              if (window.focus) {newwindow.focus()}
+	               return false;
+               }
+          </script>
+
+
+          <a href="https://twitter.com/share" onclick="return popitup('https://twitter.com/share')" class="twitter-share-button" data-show-count="false"> <div class="lilnavbox-circle-diff-margin"><img src="Twitter_Logo_Blue.png"></div></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
         <a class="black-link" href="#">  <div class="lilnavbox-circle"><p> &uarr;</p></div></a>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false"> <div class="lilnavbox-circle-diff-margin"><img src="Twitter_Logo_Blue.png"></div></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!---<a target=_blankscri href= "https://twitter.com/share" class="twitter-share-button" data-show-count="false"> <div class="lilnavbox-circle-diff-margin"><img src="Twitter_Logo_Blue.png"></div></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><!-->
           <div class="lilnavbox-circle-another-diff-margin"><p><img src="instagramlogo.png"> </p></div>
         <a class="black-link" href="#footer">  <div class="lilnavbox-circle"><p> &darr;</p></div></a>
 
