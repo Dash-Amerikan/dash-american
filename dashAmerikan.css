@@ -90,7 +90,7 @@ img {
 
 /*footnote box associated with red footnote*/
 /*#7FFF00*/
-/*ADC: is there are reason there are two of these .footnotebox classifications?*/
+
 
 .footnotebox {
   width: 560px;
@@ -109,7 +109,6 @@ img {
 
 
 
-
 img {
   max-width: 100%;
   width: auto;
@@ -120,16 +119,7 @@ img {
 /*#7FFF00*/
 
 
-.footnotebox {
-  width: 560px;
-  height: 150px;
-  /*ADC:changed from original 105px*/
-  background-color: #f2f2f2;
-  /*background-color: #fff;*/
-  z-index: 1;
-  position: absolute;
-  /*border: 1px solid black;*/
-}
+
 
 /*use # for id (primary)*/
 /*use . for class (secondary)*/
@@ -326,6 +316,7 @@ body
 }
 
 p {
+  text-indent:40px;
   margin: 0 auto;
   width: 90%;
   max-width: 700px;
@@ -478,6 +469,10 @@ footer {
   height: 60px;
 }
 
+/*for adding tabs at the beginning of a paragraph */
+.tab {
+  margin-left: 440px;
+}
 
 
 
