@@ -8,16 +8,16 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-  <script>
-
-  </script>
-
+  <script src="jquery-inline-footnotes-min.js"></script>
 
   <script type="text/javascript">
 
 
 
    $(document).ready(function(){
+
+     $('.footnotebox').hide();
+     $(".footnote").inlineFootnote();
 
      /*welcome window*/
      modalPosition();
@@ -27,15 +27,7 @@
 
    /*modal window for footnote1*/
      $('.modal').fadeIn('fast');
-     $('.footnotebox').hide();
-     $('.close').click(function(){
-       $('.footnotebox, .modal, .modal-backdrop').fadeOut('fast');
-      });
 
-      $('.footnote').click(function(){
-          var f_id = $(this).attr('id');
-          $('#foot-' + f_id).fadeIn('fast');
-      });
       /*$('.close').click(function(){
           $('.footnotebox1, .modal-backdrop').fadeOut('fast');
       });*/
@@ -47,14 +39,6 @@
           var x = (pageWidth / 2) - (width / 2);
           $('.modal').css({left: x + "px"});
       }
-
-      function modalPosition() {
-          var width = $('.footnotebox').width();
-          var pageWidth = $(window).width();
-          var x = (pageWidth / 2) - (width / 2);
-          $('.footnotebox').css({left: x + "px"});
-      }
-
 
       $( ".kiss" ).click(function() {
         var kiss_id = $(this).attr('id');
@@ -259,12 +243,12 @@
 
 <!--all footnotes here-->
 
-  <div id= "foot-n1" class="footnotebox">
+  <div id="foot-n1" class="footnotebox">
     <span class="close">&times;</span>
     <h5>Panofsky, Erwin. “On the Problem of Describing and Interpreting Works of the Visual Arts.” Critical Inquiry 38, No. 3 (Spring 2012): 467-82.</h5>
   </div>
 
-  <div id= "foot-n2" class="footnotebox">
+  <div id="foot-n2" class="footnotebox">
     <span class="close">&times;</span>
     <h5>Panofsky, Erwin</h5>
   </div>
@@ -274,7 +258,7 @@
 
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis augue, at rhoncus turpis. Nam mauris enim, faucibus eget mollis in, pulvinar a tortor.<a class="footnote" id="n1">1</a> Curabitur sed mattis dolor, quis convallis nibh. Nullam imperdiet viverra elementum. Etiam tempus varius feugiat. Integer at dui enim. Nam nec magna vitae dolor placerat rutrum.<a class="footnote" id="n2">2</a> Phasellus fringilla ipsum at sapien congue, a porta libero aliquam. Ut posuere augue felis, sit amet tempus nibh blandit id. Aliquam pharetra placerat sapien, a faucibus orci accumsan a. Nulla non bibendum orci. Sed neque nunc, condimentum ac imperdiet in, facilisis ac dui. Aenean commodo hendrerit velit. Donec sagittis orci sed aliquam luctus.<a class="footnote" id="n1">1</a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis augue, at rhoncus turpis. Nam mauris enim, faucibus eget mollis in, pulvinar a tortor.<a class="footnote" href="#foot-n1" id="n1">1</a> Curabitur sed mattis dolor, quis convallis nibh. Nullam imperdiet viverra elementum. Etiam tempus varius feugiat. Integer at dui enim. Nam nec magna vitae dolor placerat rutrum.<a href="#foot-n2" class="footnote" id="n2">2</a> Phasellus fringilla ipsum at sapien congue, a porta libero aliquam. Ut posuere augue felis, sit amet tempus nibh blandit id. Aliquam pharetra placerat sapien, a faucibus orci accumsan a. Nulla non bibendum orci. Sed neque nunc, condimentum ac imperdiet in, facilisis ac dui. Aenean commodo hendrerit velit. Donec sagittis orci sed aliquam luctus.<a class="footnote" href="#foot-n1" id="n1">1</a>
 </p>
 
 <p>
