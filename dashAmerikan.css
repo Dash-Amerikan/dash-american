@@ -332,7 +332,7 @@ body
 }
 
 p {
-  text-indent:40px; /*this is where we set the indentation (automatic for new paragraphs right now)*/
+  text-indent:0px; /*this is where we set the indentation (automatic for new paragraphs right now)*/
   margin: 0 auto;
   width: 90%;
   max-width: 700px;
