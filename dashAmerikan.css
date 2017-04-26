@@ -28,10 +28,10 @@ body {
   left:20px;
   position: fixed;
   z-index: 3;
-  height: 220px;
+  height: 160px;
   width: 50px;
   background-color: #000000;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .lilnavbox-circle{
