@@ -8,67 +8,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-  <script src="jquery-inline-footnotes-min.js"></script>
 
-  <script type="text/javascript">
-
-
-
-   $(document).ready(function(){
-
-     $('.footnotebox').hide();
-     $(".footnote").inlineFootnote();
-
-     /*welcome window*/
-     modalPosition();
-     $(window).resize(function(){
-         modalPosition();
-     });
-
-   /*modal window for footnote1*/
-     $('.modal').fadeIn('fast');
-
-      /*$('.close').click(function(){
-          $('.footnotebox1, .modal-backdrop').fadeOut('fast');
-      });*/
-
-
-      function modalPosition() {
-          var width = $('.modal').width();
-          var pageWidth = $(window).width();
-          var x = (pageWidth / 2) - (width / 2);
-          $('.modal').css({left: x + "px"});
-      }
-
-      $( ".kiss" ).click(function() {
-        var kiss_id = $(this).attr('id');
-        $('#kiss-' + kiss_id).slideToggle('fast');
-      });
-
-  });
-</script>
-
-
-<!--this is the beginning of making the cycling image banner work-->
-<script>
-  window.onload = rotate;
-
-  var imagebanner = 0;
-  var singleimages = new Array("images/testimagebanner1.jpg","images/testimagebanner2.jpg","images/testimagebanner1.jpg","images/testimagebanner2.jpg", "images/testimagebanner1.jpg");
-
-  function rotate() {
-       imagebanner++;
-       if (imagebanner == singleimages.length) {
-          imagebanner = 0;
-       }
-       document.getElementById("Banner").src = singleimages[imagebanner];
-
-       setTimeout(rotate, 5 * 1000);
-  }
-</script>
-
-
-
+  <script src="javascript/DASHAmerikan.js"></script>
 
 <!--this is for making multiple embedded videos work-->
 
@@ -274,7 +215,7 @@
   So, what does it take to keep up with the Kardashians? The DASH-Amerikan project demonstrates that only through creative uses of DH methodologies can we begin to keep up and engage with this cultural phenomenon. When we do, we dig past the surface of their heavily curated public image to understand the meaning of the Kardashians to contemporary perceptions of ethnicity, race, taste, and sexuality and the centrality of digital media to their indomitable cultural influence.</p>
 
 <!-- kiss modal 1-->
-<img class="kiss" id="k1" src="kardashiankiss.png" alt="kiss">
+<img class="kiss" id="k1" src="images/kardashiankiss.png" alt="kiss">
 <div id="kiss-k1" class="kiss-body kissbox">
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Hjy49UQTkI0" frameborder="0" allowfullscreen></iframe>
 Sample tombstone information. Sample tombstone information. Sample tombstone information.Sample tombstone information.Sample tombstone information.Sample tombstone information.Sample tombstone information. Sample tombstone information.Sample tombstone information.Sample tombstone information.
@@ -489,7 +430,7 @@ It could be said that the public is drawn to the artificial, surface-level aspec
 <br>
 <img class="kiss" id="k3" src="images/kardashiankiss.png" alt="kiss">
 <div id="kiss-k3" class="kiss-body kissbox">
-<p>Wattpad Modelling (20 Topics)<iframe width="600" height="400" src="/Users/alyssadcollins/Documents/Praxis/dash-american/WattpadTopics2.png" frameborder="0" allowfullscreen></iframe>
+<p>Wattpad Modelling (20 Topics)<iframe width="600" height="400" src="images/WattpadTopics2.png" frameborder="0" allowfullscreen></iframe>
 </p></div>
 
 <p>
