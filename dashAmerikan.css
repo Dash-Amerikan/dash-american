@@ -455,8 +455,23 @@ footer {
   padding-bottom: 0px;
 }
 
+/*for DASH screenshot*/
+.DASH-screenshot img {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 350px;
+}
 
+/*for a single image*/
+.single-image {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
 
+.single-image img {
+  width: 900px;
+}
 /*for row of three images*/
 .row-of-three {
   padding: 40px 60px;
