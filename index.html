@@ -405,55 +405,6 @@ It could be said that the public is drawn to the artificial, surface-level aspec
 
 
 
-<h2>Fanfiction, Fan Response, and Adoption</h2>
-
-
-<p>
-  At several moments during the project we’ve inquired whether the kinds of conversations we've seen in the media presented by the personal and corporate entities of the Kardashians are conversations that are shared by their followers and fans. In order to identify and possibly understand conversational through-lines, the Karshashian's convergence culture, we thought we might look to some of the most engaged Kardashian fans—fanfiction writers. Since the late nineties, scholars have been studying the cultural phenomena of fan fiction, or the fannish practice of writing fiction using the characters and the worlds of beloved books, television shows, movies, and, etc.<a class="footnote" id="n3">3</a>  Fanfiction gives us even more ideas about the establishment of a Kardashian cultural community as well as the possible reification and rejection of particular discourses surrounding Kardashian celebrity. Or, what, if anything, are Kardashian fans producing in their position within the Kardashian media ecology?
-</p>
-<br>
-<div id= "foot-n3" class="footnotebox">
-  <span class="close">&times;</span>
-  <h5>Fanfiction is generally unpublished in a traditional sense, being primarily shared on the Internet, and before that in science fiction zines, however the bestselling Fifty Shades of Grey series was originally a piece of fanfiction. Karen Hellekson and Kristina Busse, <i>The Fanfiction Studies Reader</i>.</h5>
-</div>
-<p>
-  The digital writing platform Wattpad provides a new community of young amateur writers to consider and interrogate. Unlike other fanfiction communities and archives, writers of Kardashian fanfiction produce most frequently on Wattpad. And it is interesting to note that these writers are young, generally teenaged. Unlike other popular fan fiction archives Wattpad operates on popularity metrics of "most viewed" and  often publishes their popular author's <a href="https://www.dailydot.com/parsec/imagines-celebrity-encounters-starring-you-preview/">finished work</a>. The writers' choice of archive and its potential for monetization (Wattpad writer Anna Todd made a six-figure deal for her popular One Direction fanfiction in 2015) is particularly interesting when read through the lens of the Kardashians who always monetize the personal and the amateur. <a class="footnote" id="n4">4</a>
-</p>
-<div id= "foot-n4" class="footnotebox">
-  <span class="close">&times;</span>
-  <h5>Vadde and Amatuerism, NLH.</h5>
-</div>
-<br>
-<p>
-  In the tradition of fan fiction studies, we used fanfiction works, especially metadata, as a place to further interrogate the producer-consumer relations of the Kardashians and their audience. In order to begin sifting through this writing community, we built a scraping tool what collected metadata from stories that were tagged indicating they were about the Kardashians. Part of the tradition of fan fiction is a practice of generating effusive and specific tags and descriptions for stories. Thus, it seems potentially more interesting to see how authors not only are writing but also theorizing their own stories. What might we find in collective meta-engagement with individual works?
-</p>
-<br>
-<p>
-  At first look, the themes within the canon of of Kardashian fanfiction seem to stick to two major tropes: a) the narrator finds she is a missing Kardashian sister and is rescued(!) from obscurity, or b) the narrator is adopted by a Kardashian or Jenner sister. The final scenario is decidedly a "group text" genre in which the writer is imagining what might happen in celebrity group chat. These stories generally feature Kylie and Kendall.
-  It's notable that these narratives misalign with the trends of a majority of fanfiction, the romantic male-driven slash story. [add a link from dailydot]. In fact, without strong tragic narratives in need of "fixing" or male leads to transform into lovers, the Kardashian fandom manages to turn most fanfiction writing practices on their heads.
-</p>
-<br>
-<img class="kiss" id="k3" src="images/kardashiankiss.png" alt="kiss">
-<div id="kiss-k3" class="kiss-body kissbox">
-<p>Wattpad Modelling (20 Topics)<iframe width="600" height="400" src="images/WattpadTopics2.png" frameborder="0" allowfullscreen></iframe>
-</p></div>
-
-<p>
-  When we turn to topic modeling of the descriptions we see these themes of adoption and communication solidify anew. At 20 topics, relationships, especially familial, present themselves throughout. These themes become especially apparent looking at topics 4, 5, 6, and 8 (which can be found in the modal window above). The topics of fame and family are interspersed throughout, and we see the alignment of Kardashian interest and response to it by fans. The same goes for topics of celebrity and their close ties to family or friendship. The concept of narrative ("story," "reading," "books," "writing") pops up across topics.  We see the the influence of not only the act of writing, but also the ways in which the Kardashians fashion themselves as particular kinds of story-tellers (as reality tv personalities, producers of said show, and general content producers).  Thus the themes of the show, family, legacy, matriarchy, are mostly reified through their writing fan base.
-</p>
-<br>
-<p>
-  What we don't see in these fan interactions is the critique that often accompanies transformative fannish writing and fan response. We don't even see the mild interrogations of the tabloid writer or the sharp, quick-witted commentary of the twitter community. For these fanfiction writers, to keep up with the Kardashians is to love them, to insert themselves fully into their lives, to be recognized and accepted within the Kardashian matriarchal lineage.<a class="footnote" id="n5">5</a>
-</p>
-
-<div id= "foot-n5" class="footnotebox">
-  <span class="close">&times;</span>
-  <h5>For those of you who are in the (fanfiction) know, we might think about how these stories begin to reveal a  different kind of Mary Sue, one who doesn't save the day, or get the love interest but instead gets a new celebrity family.</h5>
-</div>
-
-
-
-<div id="data">
 <h2>data collection</h2>
 
 <p>
@@ -502,16 +453,9 @@ We took a number of approaches to data mining Twitter over the course of the yea
 
 <br>
 <p>
-  It soon became clear, however, that we would need to delve further into the twitter archive to explore the data we were most interested in around the Kardashians.
-   We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function. Using the browser,
-   it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of twitter.
-    While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching
-    through tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across Tom Dickinson’s writeup
-     of Twitter-scraping with Python using the advanced search feature.  <a href="http://tomkdickinson.co.uk/2015/01/scraping-tweets-directly-from-twitters-search-page-part-1/">
-       Dickinson's code</a> was quite easy to adapt for our purposes, and in short order we were able to gather the complete twitter archive of the relevant Kardashians.
-        The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc) and scraping tweets into JSON files using the Python
-        library Beautiful Soup. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page,
-         it is capable of retrieving many thousands of tweets a minute. All that remained was to combine the JSON files representing each thread in the command line.
+  It soon became clear, however, that we would need to delve further into the twitter archive to explore the data we were most interested in around the Kardashians. We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function. Using the browser, it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of twitter. While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching through tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across Tom Dickinson’s writeup of Twitter-scraping with Python using the advanced search feature.  <a href="http://tomkdickinson.co.uk/2015/01/scraping-tweets-directly-from-twitters-search-page-part-1/">
+  Dickinson's code</a> was quite easy to adapt for our purposes, and in short order we were able to gather the complete twitter archive of the relevant Kardashians. The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc) and scraping tweets into JSON files using the Python library Beautiful Soup. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page,
+  it is capable of retrieving many thousands of tweets a minute. All that remained was to combine the JSON files representing each thread in the command line.
 </p>
 <br>
 <h8>Us Weekly</h8>
@@ -544,6 +488,7 @@ We took a number of approaches to data mining Twitter over the course of the yea
 <p>
 
 </p>
+<br>
 <h2>Distant Reading the Kardashians</h2>
 
 <h8>Keeping Up With Topic Modeling and Distant Reading</h8>
@@ -609,11 +554,11 @@ By situating the approach of distant reading "within the history of ways of not 
 women's labor, and the status of literature" she points to the fear of the corporeal body of the female author of which Stein's
 literature continually evokes.  Stein's body, the source of her labor, "fat, female, lesbian, and Jewish [...] is conventionally
 seen as the source of her (unreadable, not worth reading) writing." <a class="footnote" id="n4-3">4-3</a>
-</pr>
+</p>
 
+<br>
 
-
-<p><br>
+<p>
   A distant reading of the Kardashian corpus cannot escape these paradigms and contradictions.  How can we acknowledge all the types of female labor of which the Kardashian corpus under analysis is the byproduct?  The majority of the Kardashian enterprise focuses exclusively on the corporeal form, presenting a sexualized-often exoticized-feminine ideal.  What happens when we study this corpus as purely textual?  One can argue that it allows the academic, who is predisposed to judgement, a sense of neutrality.  Therefore, by removing the visual from this particular equation, we can study the Kardashians on their own terms.  It should be noted that distant reading, through topic modeling, was a methodology chosen based on practicality.  How does one "catch up" on twelve seasons of Keeping Up with the Kardashians and read every single tweet over the course of 8 years?
 </p>
 
@@ -647,18 +592,14 @@ seen as the source of her (unreadable, not worth reading) writing." <a class="fo
 </div>
 
 <p>
-  However, this sanitation is countered by clear instances of graphic bodily functions. In season four, Kourtney's water breaks and she continues to walk around the house leaking, her younger sisters Kendall and Kyle shrieking in disgust.<a class="footnote" id="n4-4">4-4</a>
-  The viewer watches a calm and nude Kourtney shave her legs and do her makeup before
-  departing for the hospital.  Finally, Kourtney is shown giving birth to her son Mason,
-   surrounded by her sisters.  In a visceral moment of female bodily power, Kourtney
-   reaches down and pulls the newborn from her vagina, resting him on her chest before having him cleaned.
-
+  However, this sanitation is countered by clear instances of graphic bodily functions. In season four, Kourtney's water breaks and she continues to walk around the house leaking, her younger sisters Kendall and Kyle shrieking in disgust.<a class="footnote" id="n4-4">4-4</a> The viewer watches a calm and nude Kourtney shave her legs and do her makeup before
+  departing for the hospital.  Finally, Kourtney is shown giving birth to her son Mason, surrounded by her sisters.  In a visceral moment of female bodily power, Kourtney reaches down and pulls the newborn from her vagina, resting him on her chest before having him cleaned.
+  Sample tombstone information. Sample tombstone information. Sample tombstone information.Sample tombstone information.Sample tombstone information.Sample tombstone information.Sample tombstone information. Sample tombstone information.Sample tombstone information.Sample tombstone information.
   The umbilical cord is then cut on screen by her boyfriend Scott.  The event is re-enacted for a second time when Khloé describes the experience of seeing her sister give birth: "and she just reaches down and pulls him out!  And is like, 'oh my child!' and I'm like... 'I think you ripped something!  That is not normal!'
-
-
+</div></p>
+<p>
   Later in an interview, Kim describes the newborn as an Armenian baby, emphasizing the genetic makeup of the Kardashians: "He's so hairy and Armenian, it really shows how strong the Kardashian genes are."
   In this episode, the Kardashian women enact their femininity through the female body's reproductive powers: the process of giving labor, the strength of their genetic makeup, and lastly through the mother's return to the work place.  The episode of Mason's birth ends with Kourtney announcing she is returning to Miami to revive the struggling Dash store.  KUWTK reminds their viewers that this is a show about matriarchy; women are mothers, sexual objects, and the primary breadwinners of the family.
-
 </p>
 
 <br>
@@ -830,6 +771,56 @@ This othering of Kim Kardashian's Armenian heritage, however, ignores the compli
     bodily aesthetics in twentieth century L.A..  While a fuller understanding of this issue is the beyond the scope of this study,
     the problematic appropriation of black culture sheds light on the Kardashian's performance of Armenian heritage.
  </p>
+
+<br>
+
+
+<h2>Fanfiction, Fan Response, and Adoption</h2>
+
+
+<p>
+  At several moments during the project we’ve inquired whether the kinds of conversations we've seen in the media presented by the personal and corporate entities of the Kardashians are conversations that are shared by their followers and fans. In order to identify and possibly understand conversational through-lines, the Karshashian's convergence culture, we thought we might look to some of the most engaged Kardashian fans—fanfiction writers. Since the late nineties, scholars have been studying the cultural phenomena of fan fiction, or the fannish practice of writing fiction using the characters and the worlds of beloved books, television shows, movies, and, etc.<a class="footnote" id="n3">3</a>  Fanfiction gives us even more ideas about the establishment of a Kardashian cultural community as well as the possible reification and rejection of particular discourses surrounding Kardashian celebrity. Or, what, if anything, are Kardashian fans producing in their position within the Kardashian media ecology?
+</p>
+<br>
+<div id= "foot-n3" class="footnotebox">
+  <span class="close">&times;</span>
+  <h5>Fanfiction is generally unpublished in a traditional sense, being primarily shared on the Internet, and before that in science fiction zines, however the bestselling Fifty Shades of Grey series was originally a piece of fanfiction. Karen Hellekson and Kristina Busse, <i>The Fanfiction Studies Reader</i>.</h5>
+</div>
+<p>
+  The digital writing platform Wattpad provides a new community of young amateur writers to consider and interrogate. Unlike other fanfiction communities and archives, writers of Kardashian fanfiction produce most frequently on Wattpad. And it is interesting to note that these writers are young, generally teenaged. Unlike other popular fan fiction archives Wattpad operates on popularity metrics of "most viewed" and  often publishes their popular author's <a href="https://www.dailydot.com/parsec/imagines-celebrity-encounters-starring-you-preview/">finished work</a>. The writers' choice of archive and its potential for monetization (Wattpad writer Anna Todd made a six-figure deal for her popular One Direction fanfiction in 2015) is particularly interesting when read through the lens of the Kardashians who always monetize the personal and the amateur. <a class="footnote" id="n4">4</a>
+</p>
+<div id= "foot-n4" class="footnotebox">
+  <span class="close">&times;</span>
+  <h5>Vadde and Amatuerism, NLH.</h5>
+</div>
+<br>
+<p>
+  In the tradition of fan fiction studies, we used fanfiction works, especially metadata, as a place to further interrogate the producer-consumer relations of the Kardashians and their audience. In order to begin sifting through this writing community, we built a scraping tool what collected metadata from stories that were tagged indicating they were about the Kardashians. Part of the tradition of fan fiction is a practice of generating effusive and specific tags and descriptions for stories. Thus, it seems potentially more interesting to see how authors not only are writing but also theorizing their own stories. What might we find in collective meta-engagement with individual works?
+</p>
+<br>
+<p>
+  At first look, the themes within the canon of of Kardashian fanfiction seem to stick to two major tropes: a) the narrator finds she is a missing Kardashian sister and is rescued(!) from obscurity, or b) the narrator is adopted by a Kardashian or Jenner sister. The final scenario is decidedly a "group text" genre in which the writer is imagining what might happen in celebrity group chat. These stories generally feature Kylie and Kendall.
+  It's notable that these narratives misalign with the trends of a majority of fanfiction, the romantic male-driven slash story. [add a link from dailydot]. In fact, without strong tragic narratives in need of "fixing" or male leads to transform into lovers, the Kardashian fandom manages to turn most fanfiction writing practices on their heads.
+</p>
+<br>
+<img class="kiss" id="k3" src="images/kardashiankiss.png" alt="kiss">
+<div id="kiss-k3" class="kiss-body kissbox">
+<p>Wattpad Modelling (20 Topics)<iframe width="600" height="400" src="images/WattpadTopics2.png" frameborder="0" allowfullscreen></iframe>
+</p></div>
+
+<p>
+  When we turn to topic modeling of the descriptions we see these themes of adoption and communication solidify anew. At 20 topics, relationships, especially familial, present themselves throughout. These themes become especially apparent looking at topics 4, 5, 6, and 8 (which can be found in the modal window above). The topics of fame and family are interspersed throughout, and we see the alignment of Kardashian interest and response to it by fans. The same goes for topics of celebrity and their close ties to family or friendship. The concept of narrative ("story," "reading," "books," "writing") pops up across topics.  We see the the influence of not only the act of writing, but also the ways in which the Kardashians fashion themselves as particular kinds of story-tellers (as reality tv personalities, producers of said show, and general content producers).  Thus the themes of the show, family, legacy, matriarchy, are mostly reified through their writing fan base.
+</p>
+<br>
+<p>
+  What we don't see in these fan interactions is the critique that often accompanies transformative fannish writing and fan response. We don't even see the mild interrogations of the tabloid writer or the sharp, quick-witted commentary of the twitter community. For these fanfiction writers, to keep up with the Kardashians is to love them, to insert themselves fully into their lives, to be recognized and accepted within the Kardashian matriarchal lineage.<a class="footnote" id="n5">5</a>
+</p>
+
+<div id= "foot-n5" class="footnotebox">
+  <span class="close">&times;</span>
+  <h5>For those of you who are in the (fanfiction) know, we might think about how these stories begin to reveal a  different kind of Mary Sue, one who doesn't save the day, or get the love interest but instead gets a new celebrity family.</h5>
+</div>
+
 
 <br>
 
