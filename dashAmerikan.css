@@ -28,10 +28,10 @@ body {
   left:20px;
   position: fixed;
   z-index: 3;
-  height: 220px;
+  height: 170px;
   width: 50px;
   background-color: #000000;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .lilnavbox-circle{
@@ -43,6 +43,17 @@ margin-top: 5px;
 margin-left: 4px;
 padding-left: 13px;
 }
+
+.lilnavbox-circlebird{
+background-color: #FFFFFF;
+border-radius: 20px;
+width: 40px;
+height:40px;
+margin-top: 5px;
+margin-left: 4px;
+padding-left: 13px;
+}
+
 
 .lilnavbox-circle-diff-margin{
 background-color: #FFFFFF;
