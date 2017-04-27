@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 
+  $('.modal').modal();
    $('.footnotebox').hide();
 
 
@@ -11,19 +12,20 @@ $(document).ready(function(){
    });
 
  /*modal window for footnote1*/
-   $('.modal').fadeIn('fast');
+   $('.splash').fadeIn('fast');
 
     $('.close').click(function(){
-        $('#myModal').fadeOut('fast');
+      $('#myModal').fadeOut('fast');
+      $('.footnotebox').modal('close');
     });
 
 
 
     function modalPosition() {
-        var width = $('.modal').width();
+        var width = $('.splash').width();
         var pageWidth = $(window).width();
         var x = (pageWidth / 2) - (width / 2);
-        $('.modal').css({left: x + "px"});
+        $('.splash').css({left: x + "px"});
     }
 
     $( ".kiss" ).click(function() {

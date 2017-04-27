@@ -138,7 +138,7 @@ img {
 
 
 /* The Modal (the entire site behind welcome window */
-.modal {
+.splash {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -154,14 +154,14 @@ img {
 
 /*Modal content (fill) for welcome window*/
 /**/
-.modal-content {
+.splash .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 400px; /*size of the box*/
     height: 500px; /*size of the box*/
-}
+} 
 
 /* The Close Button */
 .close {
@@ -207,6 +207,11 @@ img {
   font-size: 75%;
   vertical-align: super;
   font-weight: 400;
+}
+
+.footnotebox {
+  background-color: none;
+  padding: 10px;
 }
 
 
