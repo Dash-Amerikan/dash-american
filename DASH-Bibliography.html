@@ -36,7 +36,14 @@
             <!--<img src="kardashiankiss.png" style="width: 15%; height: 15%"/>-->
             AMERIKAN
             </h1>
+            <script language="javascript" type="text/javascript">
 
+                 function goToAnchor(anchor) {
+                   var loc = document.location.toString().split('#')[0];
+                   document.location = loc + '#' + anchor;
+                   return false;
+                 }
+            </script>
             <!--the black navigation bar-->
             <div class="row ">
 
@@ -44,10 +51,11 @@
 
                 <ul class="tabs black">
 
-                  <li class="tab col s3"><a href="#test1"> <span class= "linktext">SOCIAL MEDIA AND IDENTITY</a></li>
-                  <li class="tab col s3"><a href="#test2"> <span class="linktext">POP CULTURE AND REALITY TV</a></li>
-                  <li class="tab col s3"><a href="#test3"> <span class="linktext">THE KARDASHIANS</a></li>
-                  <li class="tab col s3"><a href="DASH-Bibliography.html"> <span class="linktext">DIGITAL HUMANITIES AND DESIGN</a></li>
+                  <li class="tab col s3"><a onclick="goToAnchor('smi')"> SOCIAL MEDIA AND IDENTITY </a></li>
+                  <li class="tab col s3"><a onclick="goToAnchor('pcrt')"> POP CULTURE AND REALITY TV </a></li>
+                  <li class="tab col s3"><a onclick="goToAnchor('kards')"> THE KARDASHIANS</a></li>
+                  <li class="tab col s3"><a onclick="goToAnchor('dhd')"> DIGITAL HUMANITIES AND DESIGN </a></li>
+
 
                 </ul>
 
@@ -63,6 +71,7 @@
             <ul>
 
             <br>
+            <div id="smi"> </div>
             <h3>Social Media and Identity</h3>
             <br>
 
@@ -107,7 +116,8 @@
 <li>Weber, Brenda R., ed. <i>Reality Gendervision: Sexuality &amp; Gender on Transatlantic Reality Television</i>. Durham: Duke University Press, 2014. </li>
 
 <br>
-<h3>Popular Culture and Reality Television</h3>
+<div id="pcrt"> </div>
+<h3>Pop Culture and Reality Television</h3>
 <br>
 
 <li>Aronson, Oleg. &quot;Personification and Consumption.&quot; February 7, 2016, 1&#45;11.</li><br>
@@ -140,6 +150,7 @@ Oxford University Press, 1993.</li><br>
 <li>Zdenek, Sean. &quot;Which Sounds are Significant? Towards a Rherotic of Closed Captioning.&quot; <i>Disability Studies Quarterly.</i> vol. 31, no 3 (2011).<br>
 
 <br>
+<div id="kards"> </div>
 <h3>The Kardashians</h3>
 <br>
 
@@ -181,6 +192,7 @@ Oxford University Press, 1993.</li><br>
 <li>Vulpo, Mike. &quot;Watch Kim Kardashian Address the Pitfalls of Social Media Before Her Paris Robbery.&quot; October 23, 2016. <i>E!News.</i> http://www.eonline.com/news/804052/watch-kim-kardashian-address-the-pitfalls-of-social-media-before-her-paris-robbery.</li>
 
 <br>
+<div id="dhd"> </div>
 <h3>Digital Humanities and Design</h3>
 <br>
 
