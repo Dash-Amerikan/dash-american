@@ -18,6 +18,7 @@ $(document).ready(function(){
     });
 
 
+
     function modalPosition() {
         var width = $('.modal').width();
         var pageWidth = $(window).width();
@@ -29,6 +30,7 @@ $(document).ready(function(){
       var kiss_id = $(this).attr('id');
       $('#kiss-' + kiss_id).slideToggle('fast');
     });
+
 
 
 //<!--this is the beginning of making the cycling image banner work-->
