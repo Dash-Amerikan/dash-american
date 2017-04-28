@@ -99,6 +99,7 @@ img {
   height: auto;
 }
 
+
 /*footnote box associated with red footnote*/
 /*#7FFF00*/
 
@@ -182,16 +183,14 @@ img {
 
 
 .kiss{
-  display:
-  display: block;
   width: 50px;
   float: right;
   margin-right: 250px;
 }
 
 .kissbox {
-  width: 700px;
-  height: 500px;
+/*  width: 700px;
+  height: 500px; */
   background-color: #fff;
   z-index: 1;
   border: 1px solid black;
@@ -478,6 +477,18 @@ footer {
 .single-image img {
   width: 900px;
 }
+
+/*for a single image*/
+.Teddy-image {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.Teddy-image img {
+  width: 300px;
+}
+
 /*for row of three images*/
 .row-of-three {
   padding: 40px 60px;
@@ -560,18 +571,18 @@ element {
   }
 }
 
-#kiss {
+/*#kiss {
   float: right;
   width: 70px;
   margin-right: 10%;
-}
+}*/
 
 .kiss-body {
   max-width: 700px;
   margin: auto;
   display: none;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 10px 10px;
 }
 
 .biobox {
