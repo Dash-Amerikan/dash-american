@@ -256,6 +256,7 @@ h2{
 
 .subheadings{
   text-align:center;
+  font-style: normal;
   font-weight: bolder;
   font-family: 'Work Sans', sans-serif;
   font-size: 100%;
