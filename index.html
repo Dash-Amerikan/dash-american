@@ -40,7 +40,7 @@
 
 
 <!--for the cycling image banner-->
-<script src="script07.js"></script>
+<!--<script src="script07.js"></script>-->
 
 
 
@@ -144,7 +144,7 @@
 
 <!--this is where the cycling image banner appears in the body-->
 <div class="centered">
-  <center><img src="images/testimagebanner1.jpg" id= Banner alt="Image_Banner"></center>
+  <center><img src="images/kardashiankiss.jpg" id= Banner alt="Image_Banner"></center>
 </div>
 
 <!--NOT CURRENTLY WORKING: this allows for forward and backward arrows on the cycling image banner
@@ -157,20 +157,6 @@
 </div>
 -->
 
-<!--
-<center>
-<br>
-<h7>By Jordan Buysse,</h7>
-</center>
-
-<center>
-<h7>Alicia Caticha, Alyssa Collins,</h7>
-</center>
-
-<center>
-<h7>Justin Greenlee, Sarah McEleney and Joey Thompson</h7>
-</center>
--->
 
 <center>
 <br>
@@ -466,8 +452,15 @@ We took a number of approaches to data mining Twitter over the course of the yea
 
 <br>
 <p>
-  It soon became clear, however, that we would need to delve further into the twitter archive to explore the data we were most interested in around the Kardashians. We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function. Using the browser, it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of twitter. While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching through tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across Tom Dickinson’s writeup of Twitter-scraping with Python using the advanced search feature.  <a href="http://tomkdickinson.co.uk/2015/01/scraping-tweets-directly-from-twitters-search-page-part-1/">
-  Dickinson's code</a> was quite easy to adapt for our purposes, and in short order we were able to gather the complete twitter archive of the relevant Kardashians. The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc) and scraping tweets into JSON files using the Python library Beautiful Soup. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page,
+  It soon became clear, however, that we would need to delve further into the twitter archive to explore the data we were most interested in around the
+   Kardashians. We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function.
+   Using the browser, it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of twitter.
+    While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching
+     through tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across Tom Dickinson’s
+     writeup of Twitter-scraping with Python using the advanced search feature.  <a href="http://tomkdickinson.co.uk/2015/01/scraping-tweets-directly-from-twitters-search-page-part-1/">
+  Dickinson's code</a> was quite easy to adapt for our purposes, and in short order we were able to gather the complete twitter archive of the relevant Kardashians.
+   The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc) and scraping tweets into JSON files using the
+    Python library Beautiful Soup. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page,
   it is capable of retrieving many thousands of tweets a minute. All that remained was to combine the JSON files representing each thread in the command line.
 </p>
 <br>
@@ -513,14 +506,26 @@ We took a number of approaches to data mining Twitter over the course of the yea
   <h5>Ted Underwood, https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/.</h5>
 </div>
 <p>
-  There’s a lot of (rightful) concern about topic modeling in the humanities, given the seeming opacity of the algorithms that attempt to retrieve semantic meaning. While algorithms like LDA have been used successfully to reinforce or challenge arguments in fields like literary studies, our intention from the start has been to use these tools as a way to tackle the practically unreadable: 13 seasons of KUWTK, twitter presences dating back to 2006, and thousands of Us Weekly articles. In other words, our methods have been from the start about exploring these datasets rather than using them as evidence or conclusions in their own right.
-  As Ted Underwood writes in an explanation of the mechanics of topic modeling, “the practice of topic modeling makes good sense on its own” even when the proof of its efficacy is “brain-squashingly hard”.
-  <a class="footnote" id="n4-0">4-0</a> If topic modeling ever becomes a standard of proof anything like close reading of primary and secondary sources, then the assumptions and bias of the mode will be worth considering deeply. However, our exploratory use of the method for a set of data that is otherwise unreadable has given us ample food for thought, pointing the project in a number of new directions we couldn’t have predicted. As our analysis of the KUWTK scripts below shows, sampling topics was only a first step that brought forward material which was best analyzed by the language of critical theory and cultural studies.
+  There’s a lot of (rightful) concern about topic modeling in the humanities, given the seeming opacity of the algorithms that attempt to retrieve semantic meaning.
+  While algorithms like LDA have been used successfully to reinforce or challenge arguments in fields like literary studies, our intention from the start has been to use
+   these tools as a way to tackle the practically unreadable: 13 seasons of KUWTK, twitter presences dating back to 2006, and thousands of Us Weekly articles.
+   In other words, our methods have been from the start about exploring these datasets rather than using them as evidence or conclusions in their own right.
+  As Ted Underwood writes in an explanation of the mechanics of topic modeling, “the practice of topic modeling makes good sense on its own” even when the proof of its
+  efficacy is “brain-squashingly hard”.<a class="footnote" id="n4-0">4-0</a> If topic modeling ever becomes a standard of proof anything like close reading of primary
+  and secondary sources, then the assumptions and bias of the mode will be worth considering deeply. However, our exploratory use of the method for a set of data that
+   is otherwise unreadable has given us ample food for thought, pointing the project in a number of new directions we couldn’t have predicted. As our analysis of the
+   KUWTK scripts below shows, sampling topics was only a first step that brought forward material which was best analyzed by the language of critical theory and cultural studies.
 </p>
 
 <br>
 <p>
-  That said, we would like to use some of the space of this essay to speak broadly to topic modeling as a method, and justify its use beyond merely auguring the spirit of the Kardashians like an algorithmic Ouija board. One of the most important things to understand about the creation of “topics” from a body of text is that they are sorted probabilistically. While as readers we will eventually ascribe meaning to the clustered topics, the models being created by LDA [explain] are looking for clusters of words that tend to co-occur, considering this measure probabilistically within small text chunks and then the corpus as a whole. The final “topics” of any given run of the algorithm are merely a measure of probably-related words. It can be helpful to think of topic modeling as working in the opposite direction of human readers: while we would move through a document and sort words according to different categories we’d expect to find, topic modeling algorithms work narrowly at the level of text, coaxing out likely topic areas by shared space.
+  That said, we would like to use some of the space of this essay to speak broadly to topic modeling as a method, and justify its use beyond merely auguring the spirit
+  of the Kardashians like an algorithmic Ouija board. One of the most important things to understand about the creation of “topics” from a body of text is that they are
+   sorted probabilistically. While as readers we will eventually ascribe meaning to the clustered topics, the models being created by LDA [explain] are looking for
+   clusters of words that tend to co-occur, considering this measure probabilistically within small text chunks and then the corpus as a whole. The final “topics”
+   of any given run of the algorithm are merely a measure of probably-related words. It can be helpful to think of topic modeling as working in the opposite direction
+   of human readers: while we would move through a document and sort words according to different categories we’d expect to find, topic modeling algorithms work narrowly
+   at the level of text, coaxing out likely topic areas by shared space.
 Topic modeling these corpora allowed us to move beyond merely finding the most unique words
 to consider unexpected connections between topics. We would certainly still notice a motherhood-type topic looking for unique words, but wouldn’t have seen the semantic cluster around activisism--in our case, a connection between Armenian Genocide and anti-bullying rhetoric.
 </p>
@@ -563,7 +568,11 @@ method, "we know how to read texts, now let's learn how not to read them."
 
 <br>
 <p>
-Natalia Cecire counters Moretti's statement, suggesting that while Moretti's intellectual goals include moving beyond the 1% of literature that comprises of the canon, he is nevertheless propagating notions of canonization.  Time equals work, which then equals value. Consequently, through the process of distant reading, one is declaring that one is not willing to put in the work to read a corpus and therefore it is of little value.  Cecire evokes Gertrude Stein, an author both part of the cannon and considered "unreadable" by critics: "Distant reading is women's work, and Gertrude Stein shows us why.  If distant reading is-avowedly-a compromised form of reading, then what does it mean to distant read Stein's The Making of Americans (1925)?"<a class="footnote" id="n4-2">4-2</a>
+Natalia Cecire counters Moretti's statement, suggesting that while Moretti's intellectual goals include moving beyond the 1% of literature that comprises of the canon,
+ he is nevertheless propagating notions of canonization.  Time equals work, which then equals value. Consequently, through the process of distant reading,
+ one is declaring that one is not willing to put in the work to read a corpus and therefore it is of little value.  Cecire evokes Gertrude Stein,
+ an author both part of the cannon and considered "unreadable" by critics: "Distant reading is women's work, and Gertrude Stein shows us why.
+ If distant reading is-avowedly-a compromised form of reading, then what does it mean to distant read Stein's The Making of Americans (1925)?"<a class="footnote" id="n4-2">4-2</a>
 By situating the approach of distant reading "within the history of ways of not reading Gertrude Stein-a history of media,
 women's labor, and the status of literature" she points to the fear of the corporeal body of the female author of which Stein's
 literature continually evokes.  Stein's body, the source of her labor, "fat, female, lesbian, and Jewish [...] is conventionally
@@ -573,7 +582,12 @@ seen as the source of her (unreadable, not worth reading) writing." <a class="fo
 <br>
 
 <p>
-  A distant reading of the Kardashian corpus cannot escape these paradigms and contradictions.  How can we acknowledge all the types of female labor of which the Kardashian corpus under analysis is the byproduct?  The majority of the Kardashian enterprise focuses exclusively on the corporeal form, presenting a sexualized-often exoticized-feminine ideal.  What happens when we study this corpus as purely textual?  One can argue that it allows the academic, who is predisposed to judgement, a sense of neutrality.  Therefore, by removing the visual from this particular equation, we can study the Kardashians on their own terms.  It should be noted that distant reading, through topic modeling, was a methodology chosen based on practicality.  How does one "catch up" on twelve seasons of Keeping Up with the Kardashians and read every single tweet over the course of 8 years?
+  A distant reading of the Kardashian corpus cannot escape these paradigms and contradictions.  How can we acknowledge all the types of female labor of
+   which the Kardashian corpus under analysis is the byproduct?  The majority of the Kardashian enterprise focuses exclusively on the corporeal form,
+   presenting a sexualized-often exoticized-feminine ideal.  What happens when we study this corpus as purely textual?  One can argue that it allows the academic,
+    who is predisposed to judgement, a sense of neutrality.  Therefore, by removing the visual from this particular equation, we can study the Kardashians on their own terms.
+     It should be noted that distant reading, through topic modeling, was a methodology chosen based on practicality.  How does one "catch up" on twelve
+     seasons of Keeping Up with the Kardashians and read every single tweet over the course of 8 years?
 </p>
 
 <br>
@@ -601,7 +615,18 @@ seen as the source of her (unreadable, not worth reading) writing." <a class="fo
 <br>
 
 <p>
-  More so than the topics most associated with the Kardashians—money, fame, sex—a clear narrative focus on motherhood emerges.  All aspects of motherhood become a central focus of the television show and the foundation of primary social relationships.  For example, the topic modeling reveals Kim Kardashian’s marriage to Kris Humphries as one primarily in terms of children: “humphries wedding dude surgery bible food hump moment minnesota marry baby question babe part marriage bed health,” and again in the cluster “sex pregnant married” and “she’s pregnant babe age corey eddie.”  The emotional and often sensitive issue of fertility is discussed with open frankness (“doctor eggs fertility kids surgery body vasectomy birth nervous ovulate boobs ovulating”).  This topic cluster revealed a multiplicity of episodes featuring Khloe’s troubles with fertility and Kim’s desire for a third child after her difficult second pregnancy.  Once pregnant, the social aspects of those nine months are clustered together in the same group as gun safety: “gun baby shower house guns safety Kanye safe hines camel range family shooting”.  The actual births of these children are, in keeping with Kardashian brand's frankness about the female body during pregnancy, discussed openly as seen in the cluster “baby doctor doctors breech.” This candor should be taken as one befitting the genre of reality tv in which they are situated, a genre of television which revisits, relives, and discusses these issues from the safety of the interview chair or the pristine white sofa.  The Kardashian sisters lounge with a glass of wine and rehash the days’ or weeks’ events, often avoiding the representation of this viscerally feminine events—ultimately sanitizing the biological aspects of femininity for a television viewing public.
+  More so than the topics most associated with the Kardashians—money, fame, sex—a clear narrative focus on motherhood emerges.  All aspects of motherhood become a
+  central focus of the television show and the foundation of primary social relationships.  For example, the topic modeling reveals Kim Kardashian’s marriage to
+   Kris Humphries as one primarily in terms of children: “humphries wedding dude surgery bible food hump moment minnesota marry baby question babe part marriage
+   bed health,” and again in the cluster “sex pregnant married” and “she’s pregnant babe age corey eddie.”  The emotional and often sensitive issue of fertility
+    is discussed with open frankness (“doctor eggs fertility kids surgery body vasectomy birth nervous ovulate boobs ovulating”).
+    This topic cluster revealed a multiplicity of episodes featuring Khloe’s troubles with fertility and Kim’s desire for a third child after her difficult second pregnancy.
+      Once pregnant, the social aspects of those nine months are clustered together in the same group as gun safety: “gun baby shower house guns safety Kanye
+       safe hines camel range family shooting”.  The actual births of these children are, in keeping with Kardashian brand's frankness about the female body during pregnancy,
+        discussed openly as seen in the cluster “baby doctor doctors breech.” This candor should be taken as one befitting the genre of reality tv in which they are situated,
+         a genre of television which revisits, relives, and discusses these issues from the safety of the interview chair or the pristine white sofa.
+         The Kardashian sisters lounge with a glass of wine and rehash the days’ or weeks’ events, often avoiding the representation of this viscerally
+         feminine events—ultimately sanitizing the biological aspects of femininity for a television viewing public.
 </p>
 
 <br>
@@ -612,12 +637,18 @@ seen as the source of her (unreadable, not worth reading) writing." <a class="fo
 </div>
 
 <p>
-  However, this sanitation is countered by clear instances of graphic bodily functions. In season four, Kourtney's water breaks and she continues to walk around the house leaking, her younger sisters Kendall and Kyle shrieking in disgust.<a class="footnote" id="n4-4">4-4</a> The viewer watches a calm and nude Kourtney shave her legs and do her makeup before
-  departing for the hospital.  Finally, Kourtney is shown giving birth to her son Mason, surrounded by her sisters.  In a visceral moment of female bodily power, Kourtney reaches down and pulls the newborn from her vagina, resting him on her chest before having him cleaned.
-  Sample tombstone information. Sample tombstone information. Sample tombstone information.Sample tombstone information.Sample tombstone information.Sample tombstone information.Sample tombstone information. Sample tombstone information.Sample tombstone information.Sample tombstone information.
-  The umbilical cord is then cut on screen by her boyfriend Scott.  The event is re-enacted for a second time when Khloé describes the experience of seeing her sister give birth: "and she just reaches down and pulls him out!  And is like, 'oh my child!' and I'm like... 'I think you ripped something!  That is not normal!'
-  Later in an interview, Kim describes the newborn as an Armenian baby, emphasizing the genetic makeup of the Kardashians: "He's so hairy and Armenian, it really shows how strong the Kardashian genes are."
-  In this episode, the Kardashian women enact their femininity through the female body's reproductive powers: the process of giving labor, the strength of their genetic makeup, and lastly through the mother's return to the work place.  The episode of Mason's birth ends with Kourtney announcing she is returning to Miami to revive the struggling Dash store.  KUWTK reminds their viewers that this is a show about matriarchy; women are mothers, sexual objects, and the primary breadwinners of the family.
+  However, this sanitation is countered by clear instances of graphic bodily functions. In season four, Kourtney's water breaks and she continues to walk around the house leaking,
+   her younger sisters Kendall and Kyle shrieking in disgust.<a class="footnote" id="n4-4">4-4</a> The viewer watches a calm and nude Kourtney shave her legs and do her makeup before
+  departing for the hospital.  Finally, Kourtney is shown giving birth to her son Mason, surrounded by her sisters.  In a visceral moment of female bodily power, Kourtney reaches
+  down and pulls the newborn from her vagina, resting him on her chest before having him cleaned.
+  The umbilical cord is then cut on screen by her boyfriend Scott.  The event is re-enacted for a second time when Khloé describes the experience of seeing her sister give birth:
+   "and she just reaches down and pulls him out!  And is like, 'oh my child!' and I'm like... 'I think you ripped something!  That is not normal!'
+  Later in an interview, Kim describes the newborn as an Armenian baby, emphasizing the genetic makeup of the Kardashians: "He's so hairy and Armenian,
+ it really shows how strong the Kardashian genes are."
+  In this episode, the Kardashian women enact their femininity through the female body's reproductive powers: the process of giving labor,
+   the strength of their genetic makeup, and lastly through the mother's return to the work place.  The episode of Mason's birth ends with Kourtney
+    announcing she is returning to Miami to revive the struggling Dash store.  KUWTK reminds their viewers that this is a show about matriarchy;
+    women are mothers, sexual objects, and the primary breadwinners of the family.
 </p>
 <img class="kiss" id="k10" src="images/kardashiankiss.png" alt="kiss">
 <div id="kiss-k10" class="kiss-body kissbox">
@@ -631,9 +662,12 @@ seen as the source of her (unreadable, not worth reading) writing." <a class="fo
 </div>
 
 <p>
-  Maria Pramaggiore and Diane Negia have interpreted the Kardashian’s candor about the female body as representative of a postfeminist version of female empowerment, one which endorses gender equality as a combination of commercial success, luxury consumption, and sexual objectification.
-<a class="footnote" id="n4-5">4-5</a> Yet, this interpretation ignores the fundamental differences between the glossy touched up curves of Kim’s celebrated derriere in fashion spreads and the television show’s visceral evocation of the female body as messy and biological.
-The space between these dual portrayals of the Kardashian body is society’s fear of the abject, that which transgresses and threatens societal visions of cleanliness, particularly as it relates to the female form. The removal of hair, the air brushing away of moles and pores becomes the
+  Maria Pramaggiore and Diane Negia have interpreted the Kardashian’s candor about the female body as representative of a postfeminist version of female empowerment,
+  one which endorses gender equality as a combination of commercial success, luxury consumption, and sexual objectification.
+<a class="footnote" id="n4-5">4-5</a> Yet, this interpretation ignores the fundamental differences between the glossy touched up curves of
+Kim’s celebrated derriere in fashion spreads and the television show’s visceral evocation of the female body as messy and biological.
+The space between these dual portrayals of the Kardashian body is society’s fear of the abject, that which transgresses and threatens societal visions of cleanliness,
+ particularly as it relates to the female form. The removal of hair, the air brushing away of moles and pores becomes the
 means in which to deny the female body its objectivity and abjectivity, and declare it a literal object.
 </p>
 
@@ -655,18 +689,37 @@ means in which to deny the female body its objectivity and abjectivity, and decl
 </div>
 
 <p>
-The Kardashians continually self-represent themselves in this polished form.  Yet they challenge this through the reference and depiction of the body as an abject subject capable of private bodily functions, not to mention pregnancy, labor, breastfeeding, and all the stages of procreation beyond the body’s initial sexual objectification.  In the most recent season, Kim, eager for a third child undergoes a high risk surgery on her uterus, resulting in a bladder infection which forces her to use a catheter. <a class="footnote" id="n4-6">4-6</a>
-In this case, no liquids are shown. Kim, hauling her catheter around and complaining that she “just wants to go to the bathroom” is played upon for comic relief.  However, the catheter bares a reminder that Kim’s sexualized body, seen on the covers of Playboy and Paper Magazine, is in fact a body in the biological sense of the term.  This physicality is brought to the forefront in Season 6, Episode 3, when Kim has her derriere x-rayed to prove to her critics that she has not had any artificial enhancements.  Kim justifies her decision in an onscreen interview: “People ask me all the time if my butt is real […] [T]his has been going on for years and it’s so ridiculous.  I’ve said it numerous times I haven’t had plastic surgery, I haven’t had implants […].”
+The Kardashians continually self-represent themselves in this polished form.  Yet they challenge this through the reference and depiction of the body as an
+ abject subject capable of private bodily functions, not to mention pregnancy, labor, breastfeeding, and all the stages of procreation beyond the body’s initial
+  sexual objectification.  In the most recent season, Kim, eager for a third child undergoes a high risk surgery on her uterus, resulting in a bladder infection
+   which forces her to use a catheter. <a class="footnote" id="n4-6">4-6</a>
+In this case, no liquids are shown. Kim, hauling her catheter around and complaining that she “just wants to go to the bathroom” is played upon for comic relief.
+ However, the catheter bares a reminder that Kim’s sexualized body, seen on the covers of Playboy and Paper Magazine, is in fact a body in the biological sense of the term.
+   This physicality is brought to the forefront in Season 6, Episode 3, when Kim has her derriere x-rayed to prove to her critics that she has not had any artificial enhancements.
+     Kim justifies her decision in an onscreen interview: “People ask me all the time if my butt is real […] [T]his has been going on for years and it’s so ridiculous.
+       I’ve said it numerous times I haven’t had plastic surgery, I haven’t had implants […].”
 <a class="footnote" id="n4-7">4-7</a>
 
- The public’s refusal to see Kim’s body as an authentic corporeal presence in its own right illuminates societal fears and suspicions of the abject female form.  As Alexandra Sastre has deftly argued, the authenticity of Kim Kardashian’s body places it alongside a history of the fragmentation of the female body, posing Kim as a modern day Hottentot Venus: “[A]fter years of public display before European audiences, Sarah Baartman’s racialized body was also taken apart after her death and re-inscribed as a medical specimen, a dehumanized artifact and object of study.  In Kardashian’s case, the fragmentation is not literal, but as a representational pulling-apart it is more than metaphoric; only her butt is seen, and nothing of the rest of her body, reiterating its operationalization as a synecdoche for the authenticity of her entire self.” Unlike Baartman, Kim’s whiteness allows her to “capitali[ze] on a body that in her case is positively marked as ‘exotic’ without any of the burdens that typically also accompany that designation.”
+ The public’s refusal to see Kim’s body as an authentic corporeal presence in its own right illuminates societal fears and suspicions of the abject female form.
+   As Alexandra Sastre has deftly argued, the authenticity of Kim Kardashian’s body places it alongside a history of the fragmentation of the female body,
+   posing Kim as a modern day Hottentot Venus: “[A]fter years of public display before European audiences, Sarah Baartman’s racialized body was also taken
+   apart after her death and re-inscribed as a medical specimen, a dehumanized artifact and object of study.  In Kardashian’s case, the fragmentation is
+    not literal, but as a representational pulling-apart it is more than metaphoric; only her butt is seen, and nothing of the rest of her body,
+    reiterating its operationalization as a synecdoche for the authenticity of her entire self.” Unlike Baartman, Kim’s whiteness allows her to
+    “capitali[ze] on a body that in her case is positively marked as ‘exotic’ without any of the burdens that typically also accompany that designation.”
 <a class="footnote" id="n4-8">4-8</a>
  </p>
 
 
  <br>
 <p>
- Kardashian media signals at nearly every opportunity that the family is a story about matriarchy. Its stock characters, like Kourtney Kardashian’s intermittent partner and co-parent Scott Disick, or the hapless Robert Kardashian, tend to be male. The Kardashian sisters place motherhood and family at the center of their narratives, but the father role often involves more absenteeism than full participation. Disick is perhaps the most obvious example of this narrative trend. Present as an inveterate shit-stirrer for the KUWTK writing staff, Disick’s constant re-appearance and departure from the show and media surrounding the Kardashians ensures a constant stream of drama. In contrast to the instability and unreliability of father figures in the Kardashian world, the Kardashian matriarchy makes a case for the importance of motherhood and competent mothering in a pop-cultural landscape that can often sequester the feminine within minor roles.
+ Kardashian media signals at nearly every opportunity that the family is a story about matriarchy. Its stock characters, like Kourtney Kardashian’s intermittent partner
+  and co-parent Scott Disick, or the hapless Robert Kardashian, tend to be male. The Kardashian sisters place motherhood and family at the center of their narratives,
+   but the father role often involves more absenteeism than full participation. Disick is perhaps the most obvious example of this narrative trend.
+   Present as an inveterate shit-stirrer for the KUWTK writing staff, Disick’s constant re-appearance and departure from the show and media surrounding
+    the Kardashians ensures a constant stream of drama. In contrast to the instability and unreliability of father figures in the Kardashian world,
+     the Kardashian matriarchy makes a case for the importance of motherhood and competent mothering in a pop-cultural landscape that can often
+      sequester the feminine within minor roles.
  </p>
 
  <br>
@@ -682,8 +735,13 @@ In this case, no liquids are shown. Kim, hauling her catheter around and complai
    commenting upon their lives as mothers. Our cache of <i>Us Weekly</i> articles reveals
    the ways in which motherhood is erased--correlating maternity vocabulary with and
    obsession with ‘baby-weight’ and the ‘correction’ of the body following pregnancy.
-Again, there is an attempt to control and neutralize the abject female form often seen on KUWTK.  This is particularly emphasized in the strict and continual coverage of the Kardashian’s red carpet appearances and photo shoots.
-The tabloids also covered the Kardashian presence on social media. “twitter kim march nude tweeted selfie butt naked”.  This is fascinating since the Kardashian presence on social media, according to our topic modeling results, correlates far more with the image of the Kardashians presented in US Weekly than their very own television show.  Like the majority of social media users, the Kardashian’s present a performative glossy lifestyle of the rich and famous through their use of twitter; the frank treatment of their bodies as seen on <i>KUWTK</i> complete vanishes.
+Again, there is an attempt to control and neutralize the abject female form often seen on KUWTK.
+This is particularly emphasized in the strict and continual coverage of the Kardashian’s red carpet appearances and photo shoots.
+The tabloids also covered the Kardashian presence on social media. “twitter kim march nude tweeted selfie butt naked”.
+This is fascinating since the Kardashian presence on social media, according to our topic modeling results,
+correlates far more with the image of the Kardashians presented in US Weekly than their very own television show.
+  Like the majority of social media users, the Kardashian’s present a performative glossy lifestyle of the rich
+  and famous through their use of twitter; the frank treatment of their bodies as seen on <i>KUWTK</i> complete vanishes.
  </p>
  <img class="kiss" id="k11" src="images/kardashiankiss.png" alt="kiss">
  <div id="kiss-k11" class="kiss-body kissbox">
