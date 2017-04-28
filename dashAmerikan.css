@@ -467,6 +467,14 @@ footer {
   width: 350px;
 }
 
+/*for cycling image banner*/
+.cycling-banner img {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 1200px;
+  /*1024px;*/
+  /*width: 1024px;*/
+}
 /*for a single image*/
 .single-image {
   padding-top: 40px;
