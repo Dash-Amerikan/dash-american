@@ -254,6 +254,18 @@ h2{
   padding-left: 0px;
 }
 
+.subheadings{
+  text-align:center;
+  font-weight: bolder;
+  margin-left:20.5em;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 100%;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: -2px;
+}
+
+
 /*for welcome window*/
 h3 {
   font-family: 'Playfair Display', Times, serif;
