@@ -40,7 +40,7 @@ $(document).ready(function(){
 window.onload = rotate;
 
 var imagebanner = 0;
-var singleimages = new Array("images/BannerN1.jpg","images/BannerN2.jpg","images/BannerN3.jpg", "images/BannerN4.jpg");
+var singleimages = new Array("images/BannerN3.jpg","images/BannerN4.jpg","images/BannerN2.jpg", "images/BannerN1.jpg");
 
 function rotate() {
      imagebanner++;
