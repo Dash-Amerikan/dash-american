@@ -17,6 +17,7 @@ html, body{margin: 0; padding: 0;
 
 body {
   font-weight: 100;
+  /*font-weight: 400 very dark*/
 
 }
 
@@ -261,7 +262,7 @@ h2{
   font-family: 'Work Sans', sans-serif;
   font-size: 100%;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -324,7 +325,7 @@ h7{
   font-family: 'Work Sans', sans-serif;
   font-size: 140% !important;
   text-transform: uppercase;
-  font-weight: 100;
+  /*font-weight: 100;*/
   text-align: center;
   padding-top: 5em;
   margin-bottom: 1em;
@@ -350,6 +351,9 @@ h8{
 body
 {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  /*font-weight: 400; SAME A "NORMAL"*/
+  /*font-weight: normal;*/
   font-size: 20px;
   margin-bottom: 5em;
   margin-left: 5em;
@@ -472,6 +476,17 @@ footer {
   padding-bottom: 0px;
 }
 
+#bio-text-joey {
+  width: 48%;
+  float: right;
+  padding-right: 20px;
+  padding-bottom: 250px;
+  border: 10px;
+  /*border-style: solid;
+  border-color: #f2f2f2;*/
+  padding-top: 0px;
+}
+
 /*for DASH screenshot*/
 .DASH-screenshot img {
   padding-top: 40px;
@@ -487,7 +502,7 @@ footer {
   /*1024px;*/
   /*width: 1024px;*/
 }
-/*for a single image*/
+/*for a single image, sticking beyond width of text*/
 .single-image {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -498,15 +513,15 @@ footer {
   width: 900px;
 }
 
-/*for a single image*/
-.Teddy-image {
+/*for a single image, width of text*/
+.single-image-text-width {
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
 }
 
-.Teddy-image img {
-  width: 300px;
+.single-image-text-width img {
+  width: 680px;
 }
 
 /*for row of three images*/
