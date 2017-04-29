@@ -15,12 +15,11 @@ html {
 html, body{margin: 0; padding: 0;
 }
 
+/*
 body {
   font-weight: 100;
-  /*font-weight: 400 very dark*/
-
 }
-
+*/
 
 #lilnavbox{
   border: 1px solid white;
@@ -346,6 +345,18 @@ h8{
 
 }
 
+h9 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  margin-bottom: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
+  text-align: left;
+  list-style: none;
+  margin: 0 0 100px;
+}
+
 
 
 body
@@ -361,6 +372,21 @@ body
   text-align: left;
   list-style: none;
   margin: 0 0 100px; /* bottom = footer height */
+}
+
+.bibliotext{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  /*font-weight: 400; SAME A "NORMAL"*/
+  /*font-weight: normal;*/
+  font-size: 20px;
+  margin-bottom: 1em;
+  /*margin-left: 5em;*/
+  /*margin-right: 5em;*/
+  text-align: left;
+  list-style: none;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 p {
@@ -521,7 +547,7 @@ footer {
 }
 
 .single-image-text-width img {
-  width: 680px;
+  width: 450px;
 }
 
 /*for row of three images*/
