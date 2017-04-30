@@ -596,47 +596,33 @@ As the epigraph by Teddy Roosevelt included above suggests, a hybrid ethnic iden
 
 
 <p>
-  This section narrates our process for collecting and cleaning various Kardashian archives, which we produce here to serve as a full listing of our materials
-  as well as to provide information on best practices for these data types. It’s important to note that our efforts were primarily aimed at creating a textual archive,
-   since the tools and methods to explore text seemed more robust to us than any other alternative.
+  This section narrates our process for collecting and cleaning various Kardashian archives, which we produce here to serve as a full listing of our materials as well as to provide information on best practices for these data types. It’s important to note that our efforts were primarily aimed at creating a textual archive, since the tools and methods to explore text seemed more robust to us than any other alternative.
 </p>
 
 <h2 class ="subheadings">Closed Captioning</h2>
 
 <p>
-  We gathered closed captioning transcripts for 11 seasons of the flagship Kardashian reality TV show, Keeping up with the Kardashians. To do so,
-  we used the open-source foot and a the video streaming site Hulu. CCExtractor gave us works
-  with two file types, .srt and .vtt. The .srt files are created by running optical character recognition on video subtitles, much the same way
-  other “OCR” software scans and saves text files from scans of printed pages. The more reliable .vtt format, on the other hand, is a web standard for
-   closed caption files that can be downloaded directly since it is meant to be retrieved by the browser and then displayed on top of streaming video.
-   Both file types have a similar format, however, where the text from the captions is displayed beside a timestamp for the video and the name of the line’s speaker.
+  We gathered closed captioning transcripts for 11 seasons of the flagship Kardashian reality TV show, Keeping Up with the Kardashians. To do so, we used the open-source foot and a the video streaming site Hulu. CCExtractor gave us works with two file types, .srt and .vtt. The .srt files are created by running optical character recognition on video subtitles, much the same way other “OCR” software scans and saves text files from scans of printed pages. The more reliable .vtt format, on the other hand, is a web standard for closed caption files that can be downloaded directly since it is meant to be retrieved by the browser and then displayed on top of streaming video. Both file types have a similar format, however, where the text from the captions is displayed beside a timestamp for the video and the name of the line’s speaker.
 </p>
 
-<img class="kiss" id="k9" src="images/kardashiankiss.png" alt="kiss">
-<div id="kiss-k9" class="kiss-body kissbox">
-<p>.vtt format for televison dialogue<iframe width="600" height="400" src="images/cc.png" frameborder="0" allowfullscreen></iframe>
-=======
-
-
-<img class="kiss" id="k4" src="images/kardashiankiss.png" alt="kiss">
-<div id="kiss-k4" class="kiss-body kissbox">
-<p>.vtt format for television dialogue <iframe width="600" height="300" src="images/vttformat.png" frameborder="0" allowfullscreen></iframe>
->>>>>>> 2481e2916d53a2c87a57c8918b8414593a4ad263
+<img class="kiss" id="k3-1" src="images/kardashiankiss.png" alt="kiss">
+<div id="kiss-k3-1" class="kiss-body kissbox">
+<p><center>.vtt format for closed captioning</center><img src="images/vttformat.png">
 </p></div>
-</div>
+
+
+
 <br>
 <p>
-  While the timestamp information has obvious uses for other data-centric analysis of television or movies, we chose to remove the time stamps from our files
-   in order to focus on the dialogue and speakers. To do so, we used an <a href="https://www.rev.com/captionconverter">online converter </a> to change the
-    files to .txt and  remove the time stamps and formatting characters that we did not need. While many of these tasks took time, particularly the process
-     of retrieving each episode, they were relatively straightforward once we had determined the best workflow.
+  While the timestamp information has obvious uses for other data-centric analysis of television or movies, we chose to remove the time stamps from our files in order to focus on the dialogue and speakers. To do so, we used an
+  <a href="https://www.rev.com/captionconverter">online converter </a> to change the files to .txt and  remove the time stamps and formatting characters that we did not need. While many of these tasks took time, particularly the process of retrieving each episode, they were relatively straightforward once we had determined the best workflow.
 </p>
-
+<img class="kiss" id="k3-2" src="images/kardashiankiss.png" alt="kiss">
+<div id="kiss-k3-2" class="kiss-body kissbox">
+<p><center>.txt format for closed captioning</center><img src="images/textcaptions.png">
+</p></div>
 
 <h2 class ="subheadings">Twitter</h2>
-
-
-
 
 
 <div id="foot-n3-1" class="modal footnotebox">
@@ -647,28 +633,18 @@ As the epigraph by Teddy Roosevelt included above suggests, a hybrid ethnic iden
 </div>
 
 <p>
-We took a number of approaches to data mining Twitter over the course of the year. Our first efforts used the statistical computing language R, and
-<a href="https://github.com/mkearney/rtweet"> the package rtweet</a>. This gave us relatively easy to use access to Twitter’s streaming API,
- allowing us to retrieve recent tweets around keywords related to the Kardashians and even a certain number of tweets from the accounts themselves.
- While rtweet and the streaming API affords us useful tools for retrieving data on events (for example trending topics) in real time,
- it was quite limited as a tool for archiving older tweets. It was particularly useful in becoming acquainted with the formatting and
-  metadata associated with tweets downloaded in the JSON file format.<a href ="#foot-n3-1" class="footnote" id="n3-1">25</a>
+We took a number of approaches to data mining Twitter over the course of the year. Our first efforts used the statistical computing language R, and <a href="https://github.com/mkearney/rtweet"> the package rtweet</a>. This gave us relatively easy to use access to Twitter’s streaming API, allowing us to retrieve recent tweets around keywords related to the Kardashians and even a certain number of tweets from the accounts themselves. While rtweet and the streaming API affords us useful tools for retrieving data on events (for example trending topics) in real time, it was quite limited as a tool for archiving older tweets. It was particularly useful in becoming acquainted with the formatting and metadata associated with tweets downloaded in the JSON file format.<a href ="#foot-n3-1" class="footnote" id="n3-1">25</a>
 </p>
 
 
 <br>
 <p>
-  It soon became clear, however, that we would need to delve further into the twitter archive to explore the data we were most interested in around the
-   Kardashians. We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function.
-   Using the browser, it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of twitter.
-    While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching
-     through tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across Tom Dickinson’s
-     writeup of Twitter-scraping with Python using the advanced search feature.  <a href="http://tomkdickinson.co.uk/2015/01/scraping-tweets-directly-from-twitters-search-page-part-1/">
-  Dickinson's code</a> was quite easy to adapt for our purposes, and in short order we were able to gather the complete twitter archive of the relevant Kardashians.
-   The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc) and scraping tweets into JSON files using the
-    Python library Beautiful Soup. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page,
-  it is capable of retrieving many thousands of tweets a minute. All that remained was to combine the JSON files representing each thread in the command line.
+  It soon became clear, however, that we would need to delve further into the twitter archive to explore the data we were most interested in around the Kardashians. We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function. Using the browser, it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of twitter. While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching thorough tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across Tom Dickinson’s writeup of Twitter-scraping with Python using the advanced search feature.  <a href="http://tomkdickinson.co.uk/2015/01/scraping-tweets-directly-from-twitters-search-page-part-1/"> Dickinson's code</a> was quite easy to adapt for our purposes, and in short order we were able to gather the complete twitter archive of the relevant Kardashians. The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc) and scraping tweets into JSON files using the Python library Beautiful Soup. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page, it is capable of retrieving many thousands of tweets a minute. All that remained was to combine the JSON files representing each thread in the command line.
 </p>
+<img class="kiss" id="k3-3" src="images/kardashiankiss.png" alt="kiss">
+<div id="kiss-k3-3" class="kiss-body kissbox">
+<p><center>code snippet from our twitter scraper</center><img src="images/twitterscraper.png">
+</p></div>
 
 <h2 class ="subheadings">Us Weekly</h2>
 
@@ -688,18 +664,8 @@ We took a number of approaches to data mining Twitter over the course of the yea
 </div>
 
 <p>
-  Part of the difficulty with social media archives is their huge value to corporations for the purposes of targeted advertising and gauging public sentiment.
-   For this reason, platforms like twitter have a vested interest in keeping the content of tweets locked to some degree within their own system.
-    Nevertheless, twitter offers certain archival opportunities that other social media platforms do not. While over the lifespan of Twitter, its APIs
-    (Application Program Interfaces) have been restricted somewhat, they still allow for “streaming” tweets, creating “bot” accounts, and gathering data
-    on retweets, responses, and ‘likes’.
-  Because the social media data we were interested in present many curatorial problems, we looked to many scholarly organizations that have thought deeply
-  about best archival practices. Documenting the Now, in particular, offered through tools that could enable research on twitter archives while respecting
-  user privacy and abiding by twitter’s terms of service. <a href ="#foot-n3-3" class="footnote" id="n3-3">26</a>
-  Even the best tools require constant maintenance. Our twitter scraper is currently operational, but it depends on the architecture of twitter.
-   It constructs URLs according to the way Twitter’s advanced search operates, but those URLs are liable to change at any time.
-   Moreover, Twitter has a vested interest in preventing commercial use of a tool like ours. They sell their own suite of data mining tools as a monthly
-   subscription well beyond what most humanities projects could afford.
+  Part of the difficulty with social media archives is their huge value to corporations for the purposes of targeted advertising and gauging public sentiment. For this reason, platforms like twitter have a vested interest in keeping the content of tweets locked to some degree within their own system. Nevertheless, twitter offers certain archival opportunities that other social media platforms do not. While over the lifespan of Twitter, its APIs (Application Program Interfaces) have been restricted somewhat, they still allow for “streaming” tweets, creating “bot” accounts, and gathering data on retweets, responses, and ‘likes’.
+  Because the social media data we were interested in present many curatorial problems, we looked to many scholarly organizations that have thought deeply about best archival practices. Documenting the Now, in particular, offered through tools that could enable research on twitter archives while respecting user privacy and abiding by twitter’s terms of service. <a href ="#foot-n3-3" class="footnote" id="n3-3">26</a> Even the best tools require constant maintenance. Our twitter scraper is currently operational, but it depends on the architecture of twitter. It constructs URLs according to the way Twitter’s advanced search operates, but those URLs are liable to change at any time. Moreover, Twitter has a vested interest in preventing commercial use of a tool like ours. They sell their own suite of data mining tools as a monthly subscription well beyond what most humanities projects could afford.
 </p>
 <p>
 
