@@ -108,7 +108,7 @@
                           Like our Twitter scraping tool, our <i>Us Weekly</i> article scraper used Python’s Beautiful Soup library. To gather our Kardashian article cache, we navigated to the page which listed all articles with the Kardashian tag. Using Beautiful Soup’s HTML parser, our script automatically retrieved the headline and URL of each article, creating a CSV file with the article titles and location. This file was then used to open each URL and download the contents of the article. This way, we would have a file indexing the major topics covered by <i>Us Weekly</i> alongside the full text of the articles, which we would later use in our topic modeling analysis</p>
 
                         <br>
-                        <h2>wattpad</p>
+                        <h2>wattpad</h2>
                         <br>
                         <p>
                         Using the Flask micro-framework for Python we built an application that would allow us to access Wattpad's API. This allowed us to gain access to Wattpad and search the website for relevant stories. The API documentation that was most relevant to our interests were Wattpad's "categories," "lists," and "stories." After manually identifying all possible Kardashian search terms, we ran these terms through our application. As we are most interested in the metadata and commentary produced by fan writers about their work, and not work itself the script produced CSV files that included users, titles, urls,  story descriptions, tags, categories, creation date, number of readers, and number of likes. From this information, especially the story descriptions and tags, we ran our text analysis.</P>
