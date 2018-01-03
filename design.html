@@ -55,7 +55,7 @@
 
                   <br>
                   <center>
-                  <div class="biobox"><h6>design influences</h6></div>
+                  <div class="biobox"><h6>how did they make that?</h6></div>
                   </center>
                   <br>
 
@@ -68,14 +68,14 @@
 
                   <br>
                   <p>
-                    As described in our essay (Cf. the second paragraph of “distant reading the kardashians”), the process of creating “DASH-Amerikan” occurred in three (non-distinct) phases: webscraping, topic modeling, and the authorship and design of the digital essay. In listing our process, we do not mean to say that the experience was sequential. It was not! In fact, we were constantly waffling between so-called “steps”—returning, revisiting, and revising even as we made progress towards our ultimate goal. The tools we used to scrape and analyze text from Hulu, Twitter, US Weekly, and Wattpad can be found via hyperlinks in our main page, but can also be listed here as a “study guide” for producing a project like our own. Key sites for reference include: </p>
+                    As described in our essay (Cf. the second paragraph of “distant reading the kardashians”), the process of creating “DASH-Amerikan” occurred in three (non-distinct) phases: webscraping, topic modeling, and the authorship and design of the digital essay. In listing our process, we do not mean to say that the experience was sequential. It was not! In fact, we were constantly waffling between so-called “steps”—returning, revisiting, and revising even as we made progress towards our ultimate goal. The tools we used to scrape and analyze text from Hulu, Twitter, <i>US Weekly</i>, and Wattpad can be found via hyperlinks in our main page, but can also be listed here as a “study guide” for producing a project like our own. Key sites for reference include: </p>
 
                     <br>
                     <p>
                       The open source software CCExtractor (use: scrape text from Hulu);<br>
                       the statistical computing language R and the package rtweet;<br>
                       Tom Dickinson’s Twitter scraper (use: apply to individual family accounts);<br>
-                      Beautiful Soup’s package for parsing HTML (use: extract text from an US Weekly archive with tags to articles about the Kardashians);<br>
+                      Beautiful Soup’s package for parsing HTML (use: extract text from an <i>US Weekly</i> archive with tags to articles about the Kardashians);<br>
                       a scraping tool we built for the fanfiction site Wattpad (use: collected stories about the Kardashians);<br>
                       and the topic modeling software MALLET (use: analyze our archive).<br>
 
@@ -88,7 +88,7 @@
 
                       <br>
                       <p>
-                        We gathered closed captioning transcripts for 11 seasons of the flagship Kardashian reality television show, Keeping Up with the Kardashians. To do so, we used the open-source software CCExtractor and the video streaming site Hulu. CCExtractor gave us works with two file types, .srt and .vtt. The .srt files are created by running optical character recognition on video subtitles, much the same way other “OCR” software scans and saves text files from scans of printed pages. The more reliable .vtt format, on the other hand, is a web standard for closed caption files that can be downloaded directly as it is meant to be retrieved by the browser and then displayed on top of streaming video. Both file types have a similar format, however, where the text from the captions is displayed beside a timestamp for the video and the name of the line’s speaker. </p>
+                        We gathered closed captioning transcripts for 11 seasons of the flagship Kardashian reality television show, <i>Keeping Up with the Kardashians</i>. To do so, we used the open-source software CCExtractor and the video streaming site Hulu. CCExtractor gave us works with two file types, .srt and .vtt. The .srt files are created by running optical character recognition on video subtitles, much the same way other “OCR” software scans and saves text files from scans of printed pages. The more reliable .vtt format, on the other hand, is a web standard for closed caption files that can be downloaded directly as it is meant to be retrieved by the browser and then displayed on top of streaming video. Both file types have a similar format, however, where the text from the captions is displayed beside a timestamp for the video and the name of the line’s speaker. </p>
 
                         <br>
                       <h2>Twitter</h2>
@@ -105,7 +105,13 @@
                         <h2><i>Us Weekly</i></h2>
                         <br>
                         <p>
-                          Like our Twitter scraping tool, our Us Weekly article scraper used Python’s Beautiful Soup library. To gather our Kardashian article cache, we navigated to the page which listed all articles with the Kardashian tag. Using Beautiful Soup’s HTML parser, our script automatically retrieved the headline and URL of each article, creating a CSV file with the article titles and location. This file was then used to open each URL and download the contents of the article. This way, we would have a file indexing the major topics covered by Us Weekly alongside the full text of the articles, which we would later use in our topic modeling analysis</p>
+                          Like our Twitter scraping tool, our <i>Us Weekly</i> article scraper used Python’s Beautiful Soup library. To gather our Kardashian article cache, we navigated to the page which listed all articles with the Kardashian tag. Using Beautiful Soup’s HTML parser, our script automatically retrieved the headline and URL of each article, creating a CSV file with the article titles and location. This file was then used to open each URL and download the contents of the article. This way, we would have a file indexing the major topics covered by <i>Us Weekly</i> alongside the full text of the articles, which we would later use in our topic modeling analysis</p>
+
+                        <br>
+                        <h2>wattpad</p>
+                        <br>
+                        <p>
+                        Using the Flask micro-framework for Python we built an application that would allow us to access Wattpad's API. This allowed us to gain access to Wattpad and search the website for relevant stories. The API documentation that was most relevant to our interests were Wattpad's "categories," "lists," and "stories." After manually identifying all possible Kardashian search terms, we ran these terms through our application. As we are most interested in the metadata and commentary produced by fan writers about their work, and not work itself the script produced CSV files that included users, titles, urls,  story descriptions, tags, categories, creation date, number of readers, and number of likes. From this information, especially the story descriptions and tags, we ran our text analysis.</P>
 
                         <br>
                         <h2>Best Practices for the Archive</h2>
