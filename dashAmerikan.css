@@ -487,6 +487,11 @@ footer {
   clear: both;
 }
 
+.lips-inline {
+  height: 20px;
+  position: inline;
+}
+
 .bio-image {
   width: 48%;
   text-align: left;
