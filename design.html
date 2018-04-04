@@ -63,27 +63,48 @@
 
                   <br>
                   <p>
-                    Beyond imparting content, the “DASH-Amerikan” project is intended to be useful to a wide audience. With the concepts of utility and reproducibility in mind, we’ve made both the structure of our digital essay, its style, and the topic models based our textual archive available in a GitHub repository entitled dash-american. We invite you to visit the page and either clone the repository, wholesale, or download key files such as index.html, dashAmerikan.css, and DASHAmerikan.js so you can adapt them for your own use! In addition to using the Developer Tools in your internet browser (found behind the hamburger button on a PC or the triple dots on a Mac), the files for markup language (HTML), Cascading Style Sheets (CSS), and JavaScript (.js) can provide a baseline for reproducing features from our digital essay such as the black navigation bar, cycling image banner, footnotes, kiss icons, image grid, and the button that shares our site on Twitter. Each design element is built to be borrowed, and beginners may find it useful to identity key lines in their text editor that correspond to the layout and formatting of header, footer, body text, and incorporating Google Fonts.
+                    Beyond imparting content, the “DASH-Amerikan” project intends to be useful to a wide audience. With the concepts of utility and reproducibility in mind, we’ve made the structure of our digital essay, its style, and the topic models based our textual archive available in a GitHub repository entitled <a href="https://github.com/Dash-Amerikan/dash-american" target="_blank">dash-american</a>. We invite you to visit the page and either clone the repository, wholesale, or download key files such as <a href="https://github.com/Dash-Amerikan/dash-american/blob/master/index.html" target="_blank">index.html</a>, <a href="https://github.com/Dash-Amerikan/dash-american/blob/master/dashAmerikan.css" target="_blank">dashAmerikan.css</a>, and <a href="https://github.com/Dash-Amerikan/dash-american/blob/master/javascript/DASHAmerikan.js" target="_blank">DASHAmerikan.js</a>, so you can adapt them for your own use! In addition to using the Developer Tools in your internet browser (found behind the hamburger button on a PC or the triple dots on a Mac), the files for markup language (HTML), Cascading Style Sheets (CSS), and JavaScript (.js) can provide a baseline for reproducing features from our digital essay such as the black navigation bar, cycling image banner, footnotes, kiss icons, image grid, and the button that shares our site on Twitter. Each design element is built to be borrowed, and beginners may find it useful to identity key lines in their text editor that correspond to the layout and formatting of header, footer, body text, and incorporating Google Fonts.
                   </p>
 
                   <br>
                   <p>
-                    As described in our essay (Cf. the second paragraph of “distant reading the kardashians”), the process of creating “DASH-Amerikan” occurred in three (non-distinct) phases: webscraping, topic modeling, and the authorship and design of the digital essay. In listing our process, we do not mean to say that the experience was sequential. It was not! In fact, we were constantly waffling between so-called “steps”—returning, revisiting, and revising even as we made progress towards our ultimate goal. The tools we used to scrape and analyze text from Hulu, Twitter, <i>US Weekly</i>, and Wattpad can be found via hyperlinks in our main page, but can also be listed here as a “study guide” for producing a project like our own. Key sites for reference include: </p>
+                    As described in our essay (Cf. the second paragraph of “distant reading the kardashians”), the process of creating “DASH-Amerikan” occurred in three (non-distinct) phases: webscraping, topic modeling, and the authorship and design of the digital essay. In listing our process, we do not mean to say that the experience was sequential. It was not! In fact, we were constantly waffling between so-called “steps”—returning, revisiting, and revising even as we made progress towards our ultimate goal. The tools we used to scrape and analyze text from Hulu, Twitter, <i>Us Weekly</i>, and Wattpad can be found via hyperlinks in our main page, but can also be listed here as a kind of “study guide” for producing a project like our own. Key sites for reference include: </p>
 
                     <br>
+
                     <p>
-                      The open source software <a href="https://www.ccextractor.org/" target="_blank">CCExtractor</a> (use: scrape text from Hulu);<br>
-                      the statistical computing language R and the package<a href="https://cran.r-project.org/web/packages/rtweet/index.html" target="_blank">rtweet</a>;<br>
-                      Tom Dickinson’s <a href="https://github.com/tomkdickinson/Twitter-Search-API-Python" target="_blank">Twitter scraper</a> (use: apply to individual family accounts);<br>
-                      <a href="https://pypi.python.org/pypi/beautifulsoup4/" target="_blank">Beautiful Soup's</a> package for parsing XML (use: extract text from an <i>US Weekly</i> archive with tags to articles about the Kardashians);<br>
-                      a scraping tool we built for the fanfiction site Wattpad (use: collected stories about the Kardashians);<br>
-                      and the topic modeling software <a href="http://mallet.cs.umass.edu/topics.php" target="_blank">MALLET</a> (use: analyze our archive).
+                      -- The open source software <a href="https://www.ccextractor.org/" target="_blank">CCExtractor</a> (use: to scrape text from Hulu);<br>
+                      the statistical computing language R and the package <a href="https://cran.r-project.org/web/packages/rtweet/index.html" target="_blank">rtweet</a>;
+                    </p> 
+
+                    <br>
+
+                    <p>
+                      -- Tom Dickinson’s <a href="https://github.com/tomkdickinson/Twitter-Search-API-Python" target="_blank">Twitter scraper</a> (use: to apply to individual family accounts);
+                    </p> 
+
+                    <br>
+
+                    <p>
+                      -- <a href="https://pypi.python.org/pypi/beautifulsoup4/" target="_blank">Beautiful Soup's</a> package for parsing XML (use: to extract text from an <i>Us Weekly</i> archive with tags to articles about the Kardashians);
+                    </p>  
+
+                    <br>
+
+                    <p>
+                      -- a scraping tool we built for the fanfiction site Wattpad (use: to collect stories about the Kardashians);
+                    </p>  
+
+                    <br>
+
+                    <p>
+                      -- and the topic modeling software <a href="http://mallet.cs.umass.edu/topics.php" target="_blank">MALLET</a> (use: to analyze our archive).
                     </p>
 
-                      <br>
+                    <br>
 
                       <p>
-                      Some of these tools require familiarity with the programming language Python, and a useful tutorial on “Getting Started with Topic Modeling and MALLET” by Shawn Graham, Scott Weingart, and Ian Milligan can be found <a href="https://programminghistorian.org/lessons/topic-modeling-and-mallet">here</a>. It should be noted, however, that none of the members of the 2016/17 Praxis cohort came into the project with much experience using any of these languages or tools. We made it work with a lot of support from the Scholars’ Lab staff at the University of Virginia, constant Googling, and scrolling through issues on Stack Overflow! What follows is an extended narrative of how we collected and cleaned various Kardashian archives, which we produce here to serve as a full listing of our materials as well as to provide information on best practices for these data types.</p>
+                      Some of these tools require familiarity with the programming language Python, and a useful tutorial on “Getting Started with Topic Modeling and MALLET” by Shawn Graham, Scott Weingart, and Ian Milligan can be found <a href="https://programminghistorian.org/lessons/topic-modeling-and-mallet" target="_blank">here</a>. It should be noted, however, that none of the members of the 2016/17 Praxis cohort came into the project with much experience using any of these languages or tools. We made it work with a lot of support from the Scholars’ Lab staff at the University of Virginia, constant Googling, and scrolling through issues on <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>! What follows is an extended narrative of how we collected and cleaned various Kardashian archives, which we produce here to serve as a full listing of our materials as well as to provide information on best practices for these data types.</p>
 
                       <br>
 
@@ -91,36 +112,36 @@
 
                       <br>
                       <p>
-                        We gathered closed captioning transcripts for 11 seasons of the flagship Kardashian reality television show, <i>Keeping Up with the Kardashians</i>. To do so, we used the open-source software CCExtractor and the video streaming site Hulu. CCExtractor gave us works with two file types, .srt and .vtt. The .srt files are created by running optical character recognition on video subtitles, much the same way other “OCR” software scans and saves text files from scans of printed pages. The more reliable .vtt format, on the other hand, is a web standard for closed caption files that can be downloaded directly as it is meant to be retrieved by the browser and then displayed on top of streaming video. Both file types have a similar format, however, where the text from the captions is displayed beside a timestamp for the video and the name of the line’s speaker. </p>
+                        We gathered closed captioning transcripts for 11 seasons of the flagship Kardashian reality television show, <i>Keeping Up with the Kardashians</i>. To do so, we used the open-source software <a href="https://www.ccextractor.org/" target="_blank">CCExtractor</a> and the video streaming site Hulu. CCExtractor gave us works with two file types, .srt and .vtt. The .srt files are created by running optical character recognition on video subtitles, much the same way other “OCR” software scans and saves text files from scans of printed pages. The more reliable .vtt format, on the other hand, is a web standard for closed caption files that can be downloaded directly as it is meant to be retrieved by the browser and then displayed on top of streaming video. Both file types have a similar format, however, where the text from the captions is displayed beside a timestamp for the video and the name of the line’s speaker. </p>
 
                         <br>
                       <h2>Twitter</h2>
 
                       <br>
                       <p>
-                        We took a number of approaches to data mining Twitter. Our first efforts used the statistical computing language R, and the package rtweet. This gave us relatively easy to use access to Twitter’s streaming API (Application Program Interface), allowing us to retrieve recent tweets around keywords related to the Kardashians and even a certain number of tweets from the accounts themselves. While rtweet and the streaming API affords us useful tools for retrieving data on events (for example trending topics) in real time, it was quite limited as a tool for archiving older tweets. It was particularly useful in becoming acquainted with the formatting and metadata associated with tweets downloaded in the JSON file format.</p>
+                        We took a number of approaches to data mining Twitter. Our first efforts used the statistical computing language R, and the package <a href="https://cran.r-project.org/web/packages/rtweet/index.html" target="_blank">rtweet</a>. This gave us relatively easy to use access to Twitter’s streaming API (Application Program Interface), allowing us to retrieve recent tweets around keywords related to the Kardashians and even a certain number of tweets from the accounts themselves. While rtweet and the streaming API affords us useful tools for retrieving data on events (for example trending topics) in real time, it was quite limited as a tool for archiving older tweets. It was particularly useful in becoming acquainted with the formatting and metadata associated with tweets downloaded in the JSON file format.</p>
 
                         <br>
                         <p>
-                        It soon became clear, however, that we would need to delve further into the Twitter archive to explore the data we were most interested in around the Kardashians. We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function. Using the browser, it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of Twitter. While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching through tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across Tom Dickinson’s writeup of Twitter-scraping with Python using the advanced search feature.  Dickinson's code was quite easy to adapt for our purposes, and in short order we were able to gather the complete Twitter archive of the relevant Kardashians. The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc.) and scraping tweets into JSON files using the Python library Beautiful Soup. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page, it is capable of retrieving many thousands of tweets a minute. All that remained was to combine the JSON files representing each thread in the command line.</p>
+                        It soon became clear, however, that we would need to delve further into the Twitter archive to explore the data we were most interested in around the Kardashians. We noticed that we could circumvent the streaming API’s limitations by viewing old tweets with Twitter’s advanced search function. Using the browser, it was simple to display tweets by user, hashtag, and most importantly, timestamp range dating back to the beginnings of Twitter. While this was an unsuitably halting way to explore very old tweets, it provided us with proof of concept at least; Twitter’s own tools for searching through tweets could be used to find whatever archives we would ultimately settle on. After some diligent Googling, we came across <a href="http://tomkdickinson.co.uk/2015/01/scraping-tweets-directly-from-twitters-search-page-part-1/" target="_blank">Tom Dickinson’s writeup</a> of Twitter-scraping with Python using the advanced search feature. <a href="https://github.com/tomkdickinson/Twitter-Search-API-Python" target="_blank">Dickinson's code</a> was quite easy to adapt for our purposes, and in short order we were able to gather the complete Twitter archive of the relevant Kardashians. The script works by constructing a URL from fields that the user inputs (username, tweet text, date range etc.) and scraping tweets into JSON files using the Python library <a href="https://pypi.python.org/pypi/beautifulsoup4/" target="_blank">Beautiful Soup</a>. The script is even quite speedy; by using “multithreading” to access the relevant tweets through multiple parallel queries to the page, it is capable of retrieving many thousands of tweets a minute. All that remained was to combine the JSON files representing each thread in the command line.</p>
 
                         <br>
                         <h2><i>Us Weekly</i></h2>
                         <br>
                         <p>
-                          Like our Twitter scraping tool, our <i>Us Weekly</i> article scraper used Python’s Beautiful Soup library. To gather our Kardashian article cache, we navigated to the page which listed all articles with the Kardashian tag. Using Beautiful Soup’s HTML parser, our script automatically retrieved the headline and URL of each article, creating a CSV file with the article titles and location. This file was then used to open each URL and download the contents of the article. This way, we would have a file indexing the major topics covered by <i>Us Weekly</i> alongside the full text of the articles, which we would later use in our topic modeling analysis.</p>
+                          Like our Twitter scraping tool, our <i>Us Weekly</i> article scraper used Python’s <a href="https://pypi.python.org/pypi/beautifulsoup4/" target="_blank">Beautiful Soup</a> library. To gather our Kardashian article cache, we navigated to the page which listed all articles with the Kardashian tag. Using Beautiful Soup’s HTML parser, our script automatically retrieved the headline and URL of each article, creating a CSV file with the article titles and location. This file was then used to open each URL and download the contents of the article. This way, we would have a file indexing the major topics covered by <i>Us Weekly</i> alongside the full text of the articles, which we would later use in our topic modeling analysis.</p>
 
                         <br>
                         <h2>wattpad</h2>
                         <br>
                         <p>
-                        Using the Flask micro-framework for Python we built an application that would allow us to access Wattpad's API. This allowed us to gain access to Wattpad and search the website for relevant stories. The API documentation that was most relevant to our interests were Wattpad's "categories," "lists," and "stories." After manually identifying all possible Kardashian search terms, we ran these terms through our application. As we are most interested in the metadata and commentary produced by fan writers about their work, and not work itself the script produced CSV files that included users, titles, urls,  story descriptions, tags, categories, creation date, number of readers, and number of likes. From this information, especially the story descriptions and tags, we ran our text analysis.</p>
+                        Using the Flask micro-framework for Python we built an application that would allow us to access Wattpad's API. This allowed us to gain access to Wattpad and search the website for relevant stories. The API documentation that was most relevant to our interests were Wattpad's "categories," "lists," and "stories." After manually identifying all possible Kardashian search terms, we ran these terms through our application. As we are most interested in the metadata and commentary produced by fan writers about their work, and not work itself the script produced CSV files that included users, titles, urls,  story descriptions, tags, categories, creation date, number of readers, and number of "likes."" From this information, especially the story descriptions and tags, we ran our text analysis.</p>
 
                         <br>
                         <h2>Best Practices for the Archive</h2>
                         <br>
                         <p>
-                          Part of the difficulty with social media archives is their huge value to corporations for the purposes of targeted advertising and gauging public sentiment. For this reason, platforms like Twitter have a vested interest in keeping the content of tweets locked to some degree within their own system. Nevertheless, Twitter offers certain archival opportunities that other social media platforms do not. While over the lifespan of Twitter, its APIs have been restricted somewhat, they still allow for “streaming” tweets, creating “bot” accounts, and gathering data on retweets, responses, and ‘likes’. Because the social media data we were interested in present many curatorial problems, we looked to other scholarly organizations that have thought deeply about best archival practices. Documenting the Now, in particular, offered tools that could enable research on Twitter archives while respecting user privacy and abiding by Twitter’s terms of service. Even the best tools require constant maintenance. Our Twitter scraper is currently operational, but it depends on the architecture of Twitter. It constructs URLs according to the way Twitter’s advanced search operates, but those URLs are liable to change at any time. Moreover, Twitter has a vested interest in preventing commercial use of a tool like ours. They sell their own suite of data mining tools as a monthly subscription well beyond what most humanities projects could afford.</p>
+                          Part of the difficulty with social media archives is their huge value to corporations for the purposes of targeted advertising and gauging public sentiment. For this reason, platforms like Twitter have a vested interest in keeping the content of tweets locked to some degree within their own system. Nevertheless, Twitter offers certain archival opportunities that other social media platforms do not. While over the lifespan of Twitter, its APIs have been restricted somewhat, they still allow for “streaming” tweets, creating “bot” accounts, and gathering data on retweets, responses, and "likes."" Because the social media data we were interested in present many curatorial problems, we looked to other scholarly organizations that have thought deeply about best archival practices. <a href="https://www.docnow.io/" target="_blank">Documenting the Now</a>, in particular, offered tools that could enable research on Twitter archives while respecting user privacy and abiding by Twitter’s terms of service. Even the best tools require constant maintenance. Our Twitter scraper is currently operational, but it depends on the architecture of Twitter. It constructs URLs according to the way Twitter’s advanced search operates, but those URLs are liable to change at any time. Moreover, Twitter has a vested interest in preventing commercial use of a tool like ours. They sell their own suite of data mining tools as a monthly subscription well beyond what most humanities projects could afford.</p>
 
                   <br>
                   <h2>Design</h2>
@@ -158,7 +179,7 @@
                   </p>
                   <br>
                   <p>
-                  The most formative influence on the design of our project, however, was the layout of the DASH boutique website:
+                  The most formative influence on the design of our project, however, was the layout of the <a href="https://shopdashonline.com/" target="_blank">DASH boutique</a> website:
                   </p>
 
                   <center>
@@ -213,7 +234,7 @@
                         <ul>
                           <!--<li><a href="http://dashamerikan.scholarslab.org/FAQs.html"> <span class="linktext">FAQs</a></li>-->
                           <!--<li><a href="http://dashamerikan.scholarslab.org/Howtousethissite.html"> <span class="linktext">How to use this site</a></li>-->
-                          <li><a href="http://dashamerikan.scholarslab.org/design.html" target="_blank"> <span class="linktext">Design influences</a></li>
+                          <li><a href="http://dashamerikan.scholarslab.org/design.html" target="_blank"> <span class="linktext">How Did They Make That?</a></li>
                         </ul>
                       </div>
                       <div class="col s12 m6 l3 foot-col">
